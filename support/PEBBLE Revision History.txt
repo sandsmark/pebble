@@ -1,0 +1,277 @@
+3.1e	 29 October 2016
+	Fixed problem where Load/Save function failed when 1-span wire links were included.
+	Added 90 degree bends to the 1-Spare wire links range to improve routing flexibility.
+	Expanded the localisation translations for Czech and Spannish languages
+
+3.1d     5 Sept 2016
+	Split the "ProtoBrd" group into two - One for 1-Span wire lines and second for strip cuts and other edits
+	Added a new "Floating" group similar to the "Notes" which can hold components/items that will not be locked to the grid for positioning
+	Some icons on the floating menu repositioned
+
+3.1c	24 Aug 2016
+	Fixed bug where some terminal group items did not show the correct image on first selection if user selected wrong # of pins (but would on re-entering properties window)	
+	Fixed bug where selection area for IC's extended 1 row below the bottom of the image
+	Added 0.0 Ohm resistor option and altered gold band shading (so less like yellow) for values < 1.0 Ohms
+	Added vertical stereo programming sockets suitable for soldering to end of strip boards
+	Modified the new Strip/Prototyping board parts/edits ("ProtoBrd" group) dialog box to provide added selections for 1-span pre-defined links.
+	Added under the "ProtoBrd" group:
+		- Three variants of insulated 1-span cross over wires with various wire colour options
+		- A 2-hole wide x 10 hole high blank mask for use primarily at left side of strip boards as off-board area
+		- A 2-hole high x 6 hole wide blank mask for use primarily at top side of strip boards as off-board area
+		- Options for bare and insulated 1-span wire links originating from a hole with and without small spot-face cut
+		- 1-Span wires can now go in any one of 16 nominal directions from any hole 
+		- 1-Span offset wire links can now be placed to left or right and above/below relative any row of holes
+
+3.1b	16 Aug 2016
+	Fixed bug for wires where a copied wire did not copy across all the parameters for insulated wire ends
+	Fixed bug to correctly display the AXE029 module when selected for the 28/40 pin PICAXE parts	
+	Localisation file for Castellano (Spanish) included (courtesy of PICAXE forum member Sedeap)	
+	Increased the range of permissible sizes for the General Strip board. Now 6 to 50 holes wide and 10 to 71 holes high.
+	Added Datak 12-600B Proto-Board
+	Added LV8549MC SOIC Dual H-Bridge (suit smaller stepper motors and simple motor controllers)
+	Added two new transistor orientations with the legs all vertically orientated (best for strip/proto board work)
+	Added two new sizes to Notes as "Micro Tag" and "Medium Note"
+        Added vertical boxed 2 row 5-way headers (as often used with ribbon cable IDC type connectors/sockets) to terminal group
+	Added spring terminals having 2.54mm centres with 2 to 10 way options
+	Added spring terminals having 5.0 mm centres with 2 and 3 way options (seemingly not available in larger sizes)
+	Added standard PICAXE stereo type programming socket with socket to left and right (for strip board projects)
+	Added single LiPo AA battery cells in horizontal and vertical orientations (positive to left / up)
+	Added components to the new "ProtoBrd" Group: 	
+	Added new "Group" on the floating menu for Strip/Prototyping board parts/edits ("ProtoBrd" group)
+		- Inter-hole track cut
+		- Small spot face cut over hole
+		- Large spot face cut over hole
+		- Resistor (bare) lead extension for horizontal and vertical resistors
+		- Small spot/dot (red colour) to indicate when a hole is blocked/occuplied from reverse side
+		- Added 6mm Pan-head bolt in horizontal and vertical orientation as dummy AA cell positive terminal
+		- Bare wire link orientated straight N-S
+		- Bare wire link orientated straight NE-SW
+		- Bare wire link orientated straight E-W
+		- Bare wire link orientated straight NW-SE
+		- Bare wire segment aligned straight N-S and offset between holes
+		- Bare wire segment aligned straight E-W and offset between holes
+		- Bare wire link orientated NE from hole and then bent up
+		- Bare wire link orientated NE from hole and then bent right
+		- Bare wire link orientated SE from hole and then bent right
+		- Bare wire link orientated SE from hole and then bent down
+		- Bare wire link orientated SW from hole and then bent down
+		- Bare wire link orientated SW from hole and then down left
+		- Bare wire link orientated NW from hole and then bent left
+		- Bare wire link orientated NW from hole and then down up
+		- Moved the "X" symbol for track cut from "Miscellaneous" group to the "ProtoBrd" group 
+	  	  (deprecated in Miscellaneous group - no longer in menu list but still works from old project saves/listings)
+
+
+3.1a	01 Jan 2014
+	Added 20 x 10 "Finger Proto-Board
+	Added MAX7219 8-digit 7-seg LED driver
+	Added PT6961  6-dig 12-seg LED driver
+	Added WS2801  3-Channel LED driver
+	Added WS2803 18-Channel LED driver (DIP and SOP formats)
+	Added Radio Shack 276-159 Breakout Board - as a component under the miscellaneous (LDR) group
+
+3.1	27 Aug 2011
+	Added code to permit language localisation with auto locale detection - user may need to add their language file
+	localisation file for Czech included
+	localisation file for French (Francais) included
+	Added PICAXE 08M2
+	Added PICAXE 14M2
+	Added PICAXE 20M2
+	Added 74HC138 - 3 to 8 Decoder with Active Low outputs
+	Added 74HC238 - 3 to 8 Decoder with Active High outputs
+
+3.0i     6 Feb 2011
+	Added 74HC4051 8-channel Analogue Switch IC == CD4051
+	Added 74HC4052 Dual 2-channel Analogue Switch IC == CD4052
+	Added 74HC4051 Triple 2-channel Analogue Switch IC == CD4053
+	Added SY4090 MOS Relay HFS2 series in DIP6 package to IC group
+	Added ceramic capacitor selection to capacitor range
+
+3.0h	27 Dec 2010
+	Corrected outline for SAA1064 to be 0.6 inch wide (not 0.3 inch wide)
+	Added Speakjet - the Magnevation speech and sound synthesiser chip
+	Added an "NC" image under misc component set for No Connection indication
+	Added small tactile momentary switch under the DIP Switch group
+	Added large tactile momentary switch under the DIP Switch group
+	Added Jaycar HP9556 Mini Proto Board
+	Added Jaycar HP9558 Large Proto Board
+	Added Jaycar HP9540 Small Strip Board 95 x  76 mm
+	Added Jaycar HP9540 Small Strip Board 95 x 152 mm
+	Added Jaycar HP9540 Small Strip Board 95 x 303 mm
+
+
+3.0g	22 Oct 2010
+	Altered dialog boxes to reduce overall size and make visually more akin to WinXP
+	Added a 'Select All' function button to the Load/Save Dialog box for ease of selecting all text to Save
+
+3.0f	18 Oct 2010
+	Added new stripboard feature for user size selection from 10 to 43 holes wide and 10 to 71 holes high
+	Fixed a bug with component vertical positioning when the top side off-board area is enabled.
+
+3.0e	27 Sept 2010
+	Added PICAXE 18M2
+	Added PICAXE 20X2
+	Added PICAXE 28X2
+	Added PICAXE 40X2
+	Added 74C922 4x4 matrix Keypad Encoder
+	Added 74C923 4x5 matrix Keypad Encoder
+	Added 74HC04 / 74HC05 Hex Inverter IC
+
+3.0d	3 March 2010 (not released)
+	Added Rev Ed FRM050 chip for PWM Motor Driver chip (for use with L293D or similar)
+	Added microMega FPU V2 co-processor chip
+	Added microMega FPU V3 co-processor chip
+	Added CD4066 Quad 1-Channel Analog Switch
+	Added MC14551B Quad 2-Channel Analog Switch
+	Added AMIS30622 i2c Micro-Stepping Motor Controller
+	Modified program code to allow selection of resistor values in the range 1.0 to 9.9 Ohms (gold 0.1 multiplier band included)
+
+3.0c   11 February 2010
+	Bug fixes to enable proper backward compatibility in loading circuit layouts from earlier versions
+	Added feature to wire pop-up dialog box to change the "level" of wires to be below, equal to, or above all other components
+             for all non-wire plus wires set to "standard" level, the last created item is always visible over a previously defined item
+
+3.0    30 January 2010
+	Added Floating Menu scheme so that the breadboard can be scrolled while the menu always remains on the page. 
+	     Menu can be move to left, centre or right on the screen and move to very front (of boards and components)
+	     or behind the boards and components
+	     Utilises different html files depending upon the browser (IE or FF). Uses the same set of javascript and image files. 
+
+
+2.5	15 January 2010
+	Added 25mm high single digit 7-segment LED display in DIP IC group
+	Added 20mm high dual digit 7-segment LED display in DIP IC group
+	Added  9mm high quad digit 7-segment LED display in DIP IC group
+	Altered code to add a new selector so that an off-board component area can be turned On or OFF above the breadboard.
+		Code is backward compatible and will still accept old component lists without the selector - gives no top area
+	Altered program code so that breadboard images only load as required/used.
+		This typically saves around 4MBytes of download when internet hosted.
+	Altered code for drawing of resistor to be more robust and work correctly under Windows 7
+
+2.4e	19 December 2009
+	Added the Rev Ed FRM015 serial to parallel printer interface chip
+	Added the MCP4011 up/down 64 pos single SPI digital pot IC
+	Added the MCP41xxx series 256 pos single SPI digital pot IC
+	Added the MCP42xxx series 256 pos dual SPI digital pots IC
+	Added the MCP46X1  series 128/256 pos dual NV i2c digital pot IC
+	Added the MCP4822 dual 12-bit SPI DAC  IC
+	Added the PFC8574 8-bit i2c IO expander IC
+	Added the 4066 / 74HC4066 Qual Analog/Bi-Lateral Switch IC
+	Added the 4015 / 74HC4015 Dual 4-bit Shift Register IC
+	Added CA3140 8-pin Op Amp IC
+	Added Generic 8-pin Op Amp IC
+	Added a top view SPST push button switch under the misc (LRD) group
+	Added a 14 pin DIP IC outline
+	Enabled the 10 position DIP switch
+
+
+2.4D(adj) correct/add 25 Oct 2009
+
+A few minor updates have now been added to PEBBLE.
+	Futurlec strip board strip spacing corrected
+	74HC59516-pin IC image improved.
+	Added the 74HC164 14-pin IC = 8-bit (Octal) serial shift register with parallel out
+	Added the 74HC165 16-pin IC = 8-bit (Octal) parallel load serial shift register
+	Added the 74HC174 16-pin IC = Hex (6) D-type flip flops with clear function
+
+
+2.4D	4 October 2009
+	Added 4D system Devboard-G1
+	Added 4D System uOLED-96-G1 display
+	Added 4D System uOLED-128-G1 display
+	Added 4D System uOLED-160-G1 display
+	Added 4D System uUSB-CE5 module
+	Added 4D System uUSB-MB5 module
+	Added 4D System uUSB module
+	Added 4D System uDrive Module
+	Added 4D System uCAM Camera Module
+	Added 4D System SOMO 14D audio-Sound Module
+        - - - - - - - - - - - - - - - - - - - - - -
+
+        Added SRF005 Trig/Pulse Ultrasonic Module
+        Added SRF008 i2c comms Ultrasonic Module with Light Level
+        Added SPE030 Speech Module for both i2c comms and switch control
+        Added CMPS03 Compass module
+
+2.4c	28 September 2009
+	Added 74LVC245A in SOIC format on SOIP to DIP adapter board
+	Added Rev Ed AXE200 28X2 module
+	Added Rev Ed AXE021 PICAXE-08 Proto Board
+	Added Datak 12-611 Proto Board
+	Added Dick Smith Electronics H5608 Proto Board (Datac 21-113) = Radio Shack part #276-150
+	Added Futurlec STPBRD1 Large Strip Board
+	Added Futurlec STPBRD2 Small Strip Board
+	Added Protobloc 1A Breadboard (as available from Rapidonline)
+	Added Protobloc 2A 64 row Breadboard (as available from Rapidonline)
+	Added Horizontal and vertical 2-pin jumpers to match with header pins
+	Added "X" icon as track cut for strip boards
+
+2.4b	12 September 2009
+	Added HopeRF HP03D Barometric Pressure Sensor (SIL version)
+	Added HopeRF HP03S Barometric Pressure Sensor (SMD version) 
+	Added the 29 row breadboard from the Rev Ed AXE091 Evaluation kit
+
+2.4a	4 August 2009
+	Added Gadget Gangster Half board and Full board  to Breadboard options
+	Added two side by side standard breadboards in 38 and 50 row sizes
+	Altered resistor band colour for yellow and orange
+
+2.4	26 July 2009
+	Added a selector for both small and large note tabs
+	Added 1-pin test pin and sockets (under the Misc group - select from LDR icon)
+	Adjusted wire colours for some miscellaneous components
+	Fixed code for missing large vertical orientated Tant cap
+	Fixed code to maintain correct image when a component is copied
+
+2.3	19 July 2009
+	Added a screen print/dump facility via a button 
+	Modified the wire edit menu layout
+
+2.2	16 July 2009
+	Added 1 hole resistors,
+	Added 1 hole diodes
+	Added CR2032 3V battery in holder
+	Added Trim pot. Horizontal and vertical multi-turn version
+	Added 40 pin DIP IC's
+	Added White LED's
+	Added 555 Timer , 4 pin DIP (blank), 6 pin DIP (blank)
+	Added 4 pin opto coupler ( transistor output style) and 6 pin opto coupler (MOC2030 triac output style)
+	Added extra proto typing boards to repertoire
+	Added keypads in 3x4 and 4x4 format
+	Added 16 terminal LCD with backlight
+	Added SPDT and DPDT relays
+
+2.1	4 July 2009
+	Adjusted colour of white wire to off-white so visible against white boards
+	For wires, added ability to end before or after a line of holes and selection for bare or insulated ends.
+
+2.0	28 June 2009
+	Expanded range of breadboards to total of 38 variations
+	Added Blue LED's
+	Added 24 pin DIP IC's
+	Added wire placement features including with 1/3 space offset for horizontal wires. 
+	Added batteries, pots, LCD modules, motors and servo's
+
+1.2	14 June 2009
+	Added TO-220 format transistors
+	Added the Rev Ed AXE029 breadboard programming adapter
+	Added header pins covering strips from 2 to 9 pins in length.
+	Added header sockets covering strips from 2 to 9 pins in length. 
+	Added DIP switches in 2 to 9 switch modules and Hex rotary switch
+	Added a range of SIL modules.
+
+1.1	9 June 2009
+	Improved text colour for capacitors changed to black and alignment relative to image.
+	Axial capacitors have had the polarity band toned down so text more easily read.
+	Diodes now have blue text for the orange glass type diodes, white text for black body diodes in
+	horizontal orientation and grey text for black body diodes in vertical orientation for ease of reading.
+	Added switches in push button, and toggle (SPST and SPDT) formats each with 4 different selectable
+	sets of wire colours. Provision for a label in black text over the switches included.
+	(just leave the label detail in the drop down window blank when no label wanted)
+	Started on terminals which will include SIL modules. Menu structure is there along will the coding
+	but no terminal strips or SIL modules as yet. The PICAXE (stereo) programming socket is already there 
+
+1.0	5 June 2009
+	First release of PEBBLE
+
+	

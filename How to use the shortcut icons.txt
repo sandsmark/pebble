@@ -1,0 +1,20 @@
+There are two short cuts provided in the PEBBLE folder as alternatives that can be used to start the PEBBLE program from the desktop
+
+You can drag which ever icon you prefer to the desk top
+
+If you have the PEBBLE directory (folder) in a location other than the root (main) directory of you C: hard drive you will need to edit the shortcut as follows:
+
+1. right click the shortcut icon and select Properties.
+
+2. you will see two entries as:
+	Target:   C:\PEBBLE\PEBBLE.html
+	Start in: C:\PEBBLE
+
+3. Change these two entries to point to the locaton where you ahve installed the PEBBLE software.
+    For example if you have PEBBLE  located on your E: drive in a directory named  PEBBLE V2.4D
+    Then the entries should be changed to:
+	Target: "E:\PEBBLE V2.4D\PEBBLE.html"
+	Start in: "E:\PEBBLE V2.4D"
+
+You can rename the shortcut and even the main PEBBLE directory to whatever names you you like
+BUT the sub directories (folders) within PEBBLE must always have the same names.

@@ -1,0 +1,519 @@
+.mybutton {
+	padding-left: 2px;
+	text-align: centre;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 8pt;
+	border: solid 1px black;
+	position: absolute;
+}
+
+
+.myselect {
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 8pt;
+	position: absolute;
+}
+
+.abstext {
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 8pt;
+	position: absolute;
+	padding-top:6px;
+}
+
+
+.titleDiv {
+	z-index: 0;
+	padding-left: 5px;
+	text-align: left;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 18pt;
+	color: black;
+	border: none;
+	position: absolute;
+	left: 200px;
+	top: 1px;
+	width: 800px;
+	height: 20px;
+}
+
+.tmDiv {
+	z-index: 0;
+	padding-left: 5px;
+	text-align: left;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 7pt;
+	color: black;
+	border: none;
+	position: absolute;
+	left: 949px;
+	top: 15px;
+	width: 20px;
+	height: 15px;
+}
+
+.instructDiv {
+	z-index: 0;
+	padding-left: 5px;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 12pt;
+	color: black;
+	border: none;
+	position: absolute;
+	left: 225px;
+	top: 30px;
+	width: 800px;
+	height: 20px;
+}
+
+.scnprntDiv {
+	padding-left: 2px;
+	text-align: center;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 8pt;
+	color: black;
+	border: dashed 1px white;
+	position: absolute;
+	left: 2px;
+	top: 556px;
+	width: 182px;
+	height: 40px;
+}
+
+.creditsDiv {
+	padding-left: 3px;
+	text-align: center;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 8pt;
+	color: black;
+	border: dashed 1px white;
+	position: absolute;
+	left: 2px;
+	top: 602px;
+	width: 182px;
+	height: 100px;
+}
+
+
+.dialogheading {
+	background-color: #1155FF;
+	font-family: Arial;
+	font-size: 10pt;
+	color: white;
+	font-weight: bold;
+}
+
+
+.contextMenu {
+	border: solid 1px black;
+	border-bottom: solid 2px black;
+	border-right: solid 2px black;
+	background-color: #99CCEE;
+	visibility: hidden;
+	position: absolute;
+	padding: 0px;
+}
+
+.menucontrol {
+	z-index: 1;
+	padding: 1px;
+	text-align: center;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 6pt
+	border: solid 1px #2266AA;
+	background: #CCCCCC;
+	position: absolute;
+	width: 233px;
+	height: 42px;
+	top: 1px;
+	left: 985px
+}
+
+
+.menuheadtext {
+	padding-top: 7px;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 9pt;
+}
+
+.smalltext {
+	padding-top: 0px;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 9pt;
+}
+
+.tinytext {
+	padding-top: 0px;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+.breadboardDiv {
+	z-index: 2;
+	border: solid 1px black;
+	border-bottom: solid 2px black;
+	border-right: solid 2px black;
+	background-repeat: no-repeat;
+	background-image: url(../images/BB23101.gif);
+	position: absolute;
+}
+
+.hiddenboardDiv {
+	z-index: 2;
+	border: solid 1px black;
+	border-bottom: solid 2px black;
+	border-right: solid 2px black;
+	background-repeat: no-repeat;
+	background-color: #CCCCCC;
+	background-image: url(../images/transparent1x1.gif);
+	position: absolute;
+}
+
+.componentboardDiv {
+	z-index: 5;
+	border: none;
+	background-image: url(../images/transparent1x1.gif);
+	position: absolute;
+}
+
+
+
+.noteOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.noteDiv {
+	text-align: center;
+	padding: 0;
+	padding-top: 4px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: black;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 9pt;
+	margin: 0px;
+}
+
+
+.sliderOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.sliderDiv {
+	text-align: center;
+	padding: 0;
+	padding-top: 4px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: black;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 9pt;
+	margin: 0px;
+}
+
+.resistorDiv {
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	cursor: pointer;
+}
+
+.dipPackageOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.dipPackageDiv {
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0px;
+	padding-top: 4px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: white;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 12pt;
+	margin: 0px;
+}
+
+.discretePackageOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.discretePackageDiv {
+	text-align: center;
+	padding: 0;
+	padding-top: 7px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: white;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 9pt;
+	margin: 0px;
+}
+
+.transistorOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.transistorDiv {
+	text-align: center;
+	padding: 0;
+	padding-top: 5px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: white;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 8pt;
+	margin: 0px;
+}
+
+.miscellOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.miscellDiv {
+	text-align: center;
+	padding: 0;
+	padding-top: 6px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: black;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 9pt;
+	margin: 0px;
+}
+
+.diodeOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.diodeDiv {
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0;
+	padding-top: 3px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: blue;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 8pt;
+	margin: 0px;
+}
+
+.capacitorOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.capacitorDiv {
+	text-align: center;
+	padding: 0;
+	padding-top: 7px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: black;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 9pt;
+	margin: 0px;
+}
+
+.terminalOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.terminalDiv {
+	text-align: center;
+	padding: 0;
+	padding-top: 5px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: black;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 8pt;
+	margin: 0px;
+}
+
+.wireDiv {
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	cursor: pointer;
+	font-size: 1px;
+}
+
+.switchOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.switchDiv {
+	text-align: center;
+	padding: 0;
+	padding-top: 6px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: black;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 9pt;
+	margin: 0px;
+}
+
+.dipswOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.dipswDiv {
+	text-align: right;
+	padding: 0;
+	padding-top: 6px;
+	padding-right: 3px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: black;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 9pt;
+	margin: 0px;
+}
+
+.fourDOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.fourDDiv {
+	text-align: right;
+	padding: 0;
+	padding-top: 6px;
+	padding-right: 3px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: black;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 9pt;
+	margin: 0px;
+}
+
+.ProtoBrdOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.ProtoBrdDiv {
+	text-align: right;
+	padding: 0;
+	padding-top: 6px;
+	padding-right: 3px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: black;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 9pt;
+	margin: 0px;
+}
+
+.WlinksOuterDiv {
+	position: absolute;
+	cursor: pointer;
+}
+
+.WlinksDiv {
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	cursor: pointer;
+	font-size: 1px;
+}
+
+
+.stripDiv1 {
+	z-index: 0;
+	padding: 0px;
+	text-align: centre;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 6pt;
+	color: black;
+	border: none;
+	position: absolute;
+	left: 160px;
+	top: 210px;
+	width: 30px;
+	height: 20px;
+}
+
+.stripDiv2 {
+	z-index: 0;
+	padding: 0px;
+	text-align: centre;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 6pt;
+	color: black;
+	border: none;
+	position: absolute;
+	left: 118px;
+	top: 202px;
+	width: 40px;
+	height: 12px;
+}
+

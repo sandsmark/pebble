@@ -1,0 +1,44 @@
+Within the javascript functions, all fields are prefixed with: "componentRef."
+
+compType	compValue	x	y 	orientation	partnumber	designator	color		compSize	package	text	pins	imgname
+						(*1)				(*2)						(*3)
+
+Resistor		|2200	|617	|372	|1		|Resistor		|R?		|		|3	|	|R?	|	|
+Diode		|0		|237	|153	|1		|Diode		|CR?		|		|		|1	|D?	|	|diode_11
+Diode		|0		|237	|180	|1		|1N914		|CR?		|		|		|1	|D?	|	|diode_11
+Diode		|0		|203	|188	|2		|Diode		|CR?		|		|		|2	|D?	|	|diode_22
+LED		|0		|440	|215	|3		|	 	|LED?		|3		|		|	|LED	|	|led_33
+Capacitor	|		|508	|147	|1		|Capacitor	|C?		|		|1		|1	|	|	|cap_111
+Capacitor	|0.1uF		|522	|188	|4		|Capacitor	|C?		|		|1		|2	|	|	|cap_214
+IC		|		|227	|270	|1		|PICAXE08M	|U?		|		|		|DIP8	|IC	|	|DIP8_1
+IC		|		|497	|270	|2		|		|U?		|		|		|DIP8	|IC	|	|DIP8_2
+IC		|		|297	|350	|1		|		|U?		|		|		|DIP18	|IC	|	|DIP18_1
+Wire		|		|211	|405	|11		|		|11		|#FF0000	|2		|11	|	|	|
+Wire		|		|211	|433	|11		|		|11		|#FF9000	|2		|11	|	|	|
+Wire		|		|211	|460	|11		|		|11		|#DFFF00	|2		|11	|	|	|
+Wire		|		|316	|407	|21		|		|11		|#000000	|2		|11	|	|	|
+Wire		|		|343	|407	|21		|		|11		|#00A060	|2		|11	|	|	|
+Wire		|		|370	|407	|21		|		|11		|#3253FF	|2		|11	|	|	|
+Note		|		|402	|399	|1		|		|		|		|		|	|Note	|	|NOTEPAD_1
+Note		|		|401	|451	|1		|		|		|		|		|	|+5Vdc	|	|NOTEPAD_1
+Note		|		|350	|351	|1		|		|		|		|		|	|a note	|	|NOTEPAD_1
+Transistor	|BC559		|534	|433	|1		|Transistor	|Q?		|		|		|1	|Q?	|	|transistor_11
+Transistor	|BC559		|615	|433	|1		|BC559		|Q?		|		|		|2	|Q?	|ebc	|transistor_21
+Transistor	|BC559		|696	|433	|2		|Transistor 	|Q?		|		|		|1	|Q?	|	|transistor_12
+Terminal	|BC559		|210	|270	|1		|		|TS?		|		|2		|2	|Terminal |	|terminal_221
+Terminal	|		|210	|270	|1		|		|TS?		|		|5		|2	|program  |	|terminal_251
+Switch		|		|604	|183	|1		|		|SW?		|1		|		|1	|Switch	|	|switch_111
+Switch		|		|315	|457	|3		|		|SW?		|1		|		|1	|Reset	|	|switch_113
+
+BREADBOARDSTYLE=BB23231{=row=col}
+
+
+For the breadboard, the digits represent:
+     23 = no of rows of holes in breadboard
+     2  = no of supply rails on each side  1 = single supply rail, 2 = two rows of supply rails, 3 = third dual rails down centre
+     3  = supply rail colour scheme         1 = no colour, 2 = red top, 3 = black top
+     1  = breadboard background colour  1 = white 2 = blue, >=3 = specials
+
+(*1) - for wires = orientation + body offset
+(*2) - for wires = end1 & end2 offset wrt holes
+(*3) - for wires = end1 & end2 type

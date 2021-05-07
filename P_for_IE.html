@@ -1,0 +1,2646 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>PEBBLE by WestAust55</title>
+
+<img name="splashscreen" src="images/splash_image.gif" width="456" height="361" vspace="70" hspace="200">
+
+<link REL="STYLESHEET" TYPE="text/css" HREF="css/pebble.css">
+<script language="javascript" src="javascript/config.js"></script>
+<script language="javascript" src="javascript/imagedata.js"></script>
+<script language="javascript" src="javascript/utils.js"></script>
+<script language="javascript">
+// Function to allow one JavaScript file to be included by another.
+// Copyright (C) 2006-08 www.cryer.co.uk
+function IncludeJavaScript(jsFile)
+{
+document.write('<scr' + 'ipt language="javascript" src="'
++ jsFile + '"></scr' + 'ipt>');
+}
+</script>
+<script language="javascript" src="javascript/minibidomapi.js"></script>
+<script language="javascript" src="javascript/dom-drag.js"></script>
+<script language="javascript" src="javascript/component.js"></script>
+<script language="javascript" src="javascript/breadboard.js"></script>
+<script language="javascript" src="javascript/application.js"></script>
+<script language="javascript">
+LocaleFile = 'javascript/localise/' + locale + '.js';
+IncludeJavaScript(LocaleFile);
+</script>
+</head>
+
+<body id = "pebblebody" bgcolor='#CCCCCC' onload="init();">
+
+<div id="menudiv" style="position:absolute; width:190px;height:705px; top:5px; left:5px;
+    padding:1px;border:2px solid #2266AA; background:#AADDFF;">
+
+<div id="componentPrototypes">
+
+<div objectprototype="Resistor" class="resistorDiv" id="Div1"
+        style="left:10px;top:40px;height:20px;width:108px;"
+        parttype="Resistor"
+        partsbin="true">
+</div>
+
+<div objectprototype="IC" class="dipPackageOuterDiv" id="Div2"
+        style="left:10px;top:69px;height:85px;width:105px;"
+        parttype="IC"
+        partsbin="true">
+     <div class="dipPackageDiv"
+        style="height:85px;width:105px;
+        background-image:url(images/dip8_1.gif);">
+      </div>
+</div>
+
+<div objectprototype="LED" class="discretePackageOuterDiv" id="Div5"
+        style="left:135px;top:40px;height:32px;width:33px;"
+        parttype="LED"
+        partsbin="true">
+     <div valign="middle" class="discretePackageDiv"
+        style="height:32px;width:33px;
+        background-image:url(images/led_11.gif);">
+     </div>
+</div>
+
+<div objectprototype="Diode" class="diodeOuterDiv" id="Div7"
+        style="left:10px;top:164px;height:17px;width:84px;"
+        parttype="Diode"
+        partsbin="true">
+     <div valign="middle" class="diodeDiv"
+        style="height:17px;width:84px;
+        background-image:url(images/diode_121.gif);">
+     </div>
+</div>
+
+<div objectprototype="Capacitor" class="capacitorOuterDiv" id="Div9"
+        style="left:125px;top:82px;height:29px;width:56px;"
+        parttype="Capacitor"
+        partsbin="true">
+        <div valign="middle" class="capacitorDiv"
+        style="height:29px;width:56px;
+        background-image:url(images/cap_111.gif);">
+     </div>
+</div>
+
+<div objectprototype="Transistor" class="transistorOuterDiv" id="Div10"
+        style="left:125px;top:124px;height:25px;width:58px;"
+        parttype="Transistor"
+        partsbin="true">
+     <div class="transistorDiv"
+        style="height:25px;width:58px;
+        background-image:url(images/transistor_11.gif);">
+     </div>
+</div>
+
+<div objectprototype="Wire" class="wireDiv" id="Wire0"
+        style="left:45px;top:197px;height:8px;width:27px;"
+        parttype="Wire"
+        partsbin="true"
+        initorient="11" initcolor="" initsize="1">
+</div>
+<div class="wireDiv" id="Wire1"
+        style="left:45px;top:212px;height:8px;width:54px;"
+        parttype="Wire"
+        partsbin="true" initorient="11" initcolor="" initsize="2"></div>
+<div class="wireDiv" id="Wire2"
+        style="left:45px;top:227px;height:8px;width:81px;"
+        parttype="Wire"
+        partsbin="true" initorient="11" initcolor="" initsize="3"></div>
+<div class="wireDiv" id="Wire3"
+        style="left:45px;top:242px;height:8px;width:108px;"
+        parttype="Wire"
+	partsbin="true" initorient="11" initcolor="" initsize="4"></div>
+<div class="wireDiv" id="Wire4"
+        style="left:45px;top:257px;height:8px;width:135px;"
+        parttype="Wire"
+        partsbin="true" initorient="11" initcolor="" initsize="5"></div>
+<div class="wireDiv" id="Wire5"
+        style="left:28px;top:205px;height:54;width:8px;"
+        parttype="Wire"
+        partsbin="true" initorient="21" initcolor="" initsize="2"></div>
+<div class="wireDiv" id="Wire6"
+        style="left:10px;top:188px;height:81;width:8px;"
+        parttype="Wire"
+        partsbin="true" initorient="21" initcolor="" initsize="3"></div>
+
+
+<div objectprototype="Switch" class="switchOuterDiv" id="Div13"
+        style="left:10px;top:280px;height:52px;width:151px;"
+        parttype="Switch"
+        partsbin="true">
+     <div class="switchDiv"
+        style="height:52px;width:151px;
+        background-image:url(images/switch_111.gif);">
+     </div>
+</div>
+
+
+<div objectprototype="Terminal" class="terminalOuterDiv" id="Div15"
+        style="left:105px;top:161px;height:27px;width:84px;"
+        parttype="Terminal"
+        partsbin="true">
+        <div valign="middle" class="terminalDiv"
+        style="height:27px;width:84px;
+        background-image:url(images/terminal_431.gif);">
+     </div>
+</div>
+
+
+<div objectprototype="DIPSw" class="dipswOuterDiv" id="Div17"
+        style="left:10px;top:340px;height:89px;width:53px;"
+        parttype="DIPSw"
+        partsbin="true">
+     <div class="dipswDiv"
+        style="height:89px;width:53px;
+        background-image:url(images/dipsw_21.gif);">
+     </div>
+</div>
+
+
+<div objectprototype="Miscell" class="miscellOuterDiv" id="Div19"
+        style="left:76px;top:340px;height:56px;width:56px;"
+        parttype="Miscell"
+        partsbin="true">
+     <div class="miscellDiv"
+        style="height:56px;width:56px;
+        background-image:url(images/misc_1.gif);">
+     </div>
+</div>
+
+<div objectprototype="Note" class="noteOuterDiv" id="Div21"
+        style="left:10px;top:1px;height:26px;width:69px;"
+        parttype="Note"
+        partsbin="true">
+     <div class="noteDiv"
+        style="height:24px;width:69px;
+        background-image:url(images/notepad_11.gif);">
+     </div>
+</div>
+
+
+<div objectprototype="Slider" class="sliderOuterDiv" id="Div29"
+        style="left:105px;top:1px;height:30px;width:74px;"
+        parttype="Slider"
+        partsbin="true">
+     <div class="sliderDiv"
+        style="height:30px;width:74px;
+        background-image:url(images/Floating_Icon.gif);">
+     </div>
+</div>
+
+
+<div objectprototype="FourD" class="fourDOuterDiv" id="Div23"
+        style="left:125px;top:378px;height:59px;width:57px;"
+        parttype="FourD"
+        partsbin="true">
+     <div class="fourDDiv"
+        style="height:59px;width:57px;
+        background-image:url(images/FourD_IconSm.gif);">
+     </div>
+</div>
+
+
+<div objectprototype="ProtoBrd" class="ProtoBrdOuterDiv" id="Div25"
+        style="left:160px;top:197px;height:12px;width:23px;"
+        parttype="ProtoBrd"
+        partsbin="true">
+     <div class="ProtoBrdDiv"
+        style="height:12px;width:23px;
+        background-image:url(images/TrackCut.gif);">
+     </div>
+</div>
+<div id="BrdNote" class="stripDiv1">Proto Parts & Edits</div>
+
+
+<div objectprototype="Wlinks" class="WlinksOuterDiv" id="Div27"
+        style="left:118px;top:197px;height:7px;width:33px;"
+        parttype="Wlinks"
+        partsbin="true" initorient="15">
+     <div class="WlinksDiv"
+        style="height:7px;width:33px;
+        background-image:url(images/protowire_151.gif);">
+     </div>
+</div>
+
+<div id="WireNote" class="stripDiv2">1-Span Specials</div>
+</div> <!-- End of componentPrototypes DIV  -->
+
+
+<div id="CreditsDiv" class="creditsDiv">
+    <script language="javascript">document.writeln(_("PEBBLE by "));</script>
+    <a  target="newwindow" href="http://www.picaxeforum.co.uk/member.php?u=46375">WestAust55</a>.
+    <br>
+    <script language="javascript">document.writeln(_("Concept based on Virtual Breadboard by "));</script>
+    <a  target="newwindow" href="http://www.musicfromouterspace.com">Ray Wilson</a>
+    <br>
+    <script language="javascript">document.writeln(_("This is a work in progress."));</script>
+    <br>
+    <script language="javascript">document.writeln(_("Visit the "));</script>
+    <a  target="newwindow" href="http://www.picaxeforum.co.uk/">PICAXE forum</a>
+    <script language="javascript">document.writeln(_("for information on the PICAXE"));</script>
+    <br>
+    <script language="javascript">document.writeln(_("micro-controller chips."));</script>
+</div>
+
+<div id="ScnPrntDiv" class="scnprntDiv">
+    <script language="javascript">document.writeln(_("Before printing the screen "));</script>
+    <a  target="newwindow" href="support/printhelp.html">
+    <script language="javascript">document.writeln(_("enable browser printing"));</script></a>
+    <script language="javascript">document.writeln(_(" of background colours and images"));</script>
+</div>
+
+
+<form name="menubuttonForm">
+	<select id="breadboardselector"
+	class="myselect"
+	style="left:4px;top:446px; font-family: Arial Narrow;font-size: 8pt;"
+	onchange="changeBreadboard(this);">
+	<option value="BB47">17R as 4D Systems DEVBOARD-G1
+	<option value="BB54">AXE021 PICAXE-08 Proto Board
+	<option value="BB56">20R 2Pwr-rail Jaycar HP9556 ProtoBrd
+	<option value="BB1" selected>23R 1Pwr-rail & No Power Ind White
+	<option value="BB2">23R 1Pwr-rail & No Power Ind Blue
+	<option value="BB3">23R 1Pwr-rail & Red Ind @ top White
+	<option value="BB4">23R 1Pwr-rail & Blk Ind @ top White
+	<option value="BB38">23R 1Pwr-rail as LEARNERS Layout
+	<option value="BB5">23R 2Pwr-rail & No Power Ind White
+	<option value="BB6">23R 2Pwr-rail & No Power Ind Blue
+	<option value="BB7">23R 2Pwr-rail & Red Ind @ top White
+	<option value="BB8">23R 2Pwr-rail & Blk Ind @ top White
+	<option value="BB9">23R 2Pwr-rail as Kiwi-Patch Board
+	<option value="BB37">23R 2Pwr-rail as Kiwi-Patch Full Brd
+	<option value="BB42">23R 1Pwr-rail Gadgt Gangstr 1/2Brd
+	<option value="BB53">25R 0Pwr-rail  DSE H5608 ProtoBrd
+	<option value="BB50">26R 0Pwr-rail Datak 12-611 Proto Brd
+	<option value="BB46">29R 2Pwr-rail & No Power Ind White
+	<option value="BB10">30R 1Pwr-rail & Red Ind @ top White
+	<option value="BB11">30R 2Pwr-rail & Red Ind @ top White
+	<option value="BB12">30R 2Pwr-rail & Red-Blue Ind  White
+	<option value="BB52">30R 2Pwr-rail as PROTOBLOC-1A
+	<option value="BB40">30R 2Pwr-rail Part DSE H5613 Green
+	<option value="BB41">30R 2Pwr-rail Full DSE H5613 Green
+	<option value="BB57">30R 2Pwr-rail Jaycar HP9558 ProtoBrd
+	<option value="BB43">35R 1Pwr-rail Gadgt Gangstr FullBrd
+	<option value="BB13">38R 1Pwr-rail & No Power Ind White
+	<option value="BB14">38R 1Pwr-rail & No Power Ind Blue
+	<option value="BB15">38R 1Pwr-rail & Red Ind @ top White
+	<option value="BB16">38R 1Pwr-rail & Blk Ind @ top White
+	<option value="BB17">38R 2Pwr-rail & No Power Ind White
+	<option value="BB18">38R 2Pwr-rail & No Power Ind Blue
+	<option value="BB19">38R 2Pwr-rail & Red Ind @ top White
+	<option value="BB20">38R 2Pwr-rail & Blk Ind @ top White
+	<option value="BB44">38R Dual BB 2Pwr & Red Ind @ top
+	<option value="BB21">44R 1Pwr-rail & No Power Ind White
+	<option value="BB22">44R 1Pwr-rail & No Power Ind Blue
+	<option value="BB23">44R 1Pwr-rail & Red Ind @ top White
+	<option value="BB24">44R 1Pwr-rail & Blk Ind @ top White
+	<option value="BB25">44R 2Pwr-rail & No Power Ind White
+	<option value="BB26">44R 2Pwr-rail & No Power Ind Blue
+	<option value="BB27">44R 2Pwr-rail & Red Ind @ top White
+	<option value="BB28">44R 2Pwr-rail & Blk Ind @ top White
+	<option value="BB39">45R 1Pwr-rail DSE H5605 ProtoBoard
+	<option value="BB62">50R Datak 12-600B Altronics H0719
+	<option value="BB29">50R 1Pwr-rail & No Power Ind White
+	<option value="BB30">50R 1Pwr-rail & No Power Ind Blue
+	<option value="BB31">50R 1Pwr-rail & Red Ind @ top White
+	<option value="BB32">50R 1Pwr-rail & Blk Ind @ top White
+	<option value="BB33">50R 2Pwr-rail & No Power Ind White
+	<option value="BB34">50R 2Pwr-rail & No Power Ind Blue
+	<option value="BB35">50R 2Pwr-rail & Red Ind @ top White
+	<option value="BB36">50R 2Pwr-rail & Blk Ind @ top White
+	<option value="BB45">50R Dual BB 2Pwr & Red Ind @ top
+	<option value="BB51">64R 2Pwr-rail as PROTOBLOC-2A
+	<option value="BB48">41R Lrg Stripbrd Futurlec STPBRD1
+	<option value="BB49">19R Sml Stripbrd Futurlec STPBRD2
+	<option value="BB58">34R Jaycar HP9540 Stripbrd  76mm
+	<option value="BB59">34R Jaycar HP9542 Stripbrd 152mm
+	<option value="BB60">34R Jaycar HP9544 Stripbrd 303mm
+	<option value="BB61">20R 'SSwan' Finger Board 20x10 holes
+	<option value="BB55">General Stripboard max 50x71 holes
+
+	</select>
+
+	<select id="topsideparking"
+	class="myselect"
+	style="left:4px;top:466px;"
+	onchange="settopsideparking(this);">
+	<option value=false>
+                    <script language="javascript">document.writeln(_("Without the top 'off-board' area"));</script>
+	<option value=true>
+                     <script language="javascript">document.writeln(_("With the topside 'off-board' area"));</script>
+	</select>
+
+	<Button type="button" class="mybutton" style="left:2px;top:488px; width:69px;"   onclick="displayLoadStoreDialog();">
+	<span><script language="javascript">document.writeln(_("Save or Load"));</script></button>
+
+	<Button type="button" class="mybutton" style="left:72px;top:488px; width:48px;"  onclick="clearBreadBoard(true);">
+	<span><script language="javascript">document.writeln(_("Clear All"));</script></button>
+
+	<Button type="button" class="mybutton" style="left:121px;top:488px; width:69px;" onclick="displayUpDownDialog();">
+	<span><script language="javascript">document.writeln(_("Comp Up/Dn"));</script></button>
+
+	<Button type="button" class="mybutton" style="left:2px;top:521px; width:93px;"   onclick="displaystripbrdDialog();return false">
+	<span><script language="javascript">document.writeln(_("Set General StripBoard"));</script></button>
+
+	<Button type="button" class="mybutton" style="left:97px;top:521px; width:93px;"  onclick="window.print();return false">
+	<span><script language="javascript">document.writeln(_("Print the Screen . . ."));</script></button>
+
+
+</form>
+
+</div> <!-- End of floating Menu DIV  -->
+
+
+<div id="BreadboardDiv" class="breadboardDiv"
+	style="position:absolute;left:210px;top:60px;width:700px;height:500px;">
+</div>
+
+<div id="HiddenboardDiv" class="hiddenboardDiv"
+        style="position:absolute;left:210px;top:570px;width:700px;height:285px;">
+</div>
+
+
+<div id="TopparkboardDiv" class="hiddenboardDiv"
+        style="position:absolute;left:210px;top:570px;width:700px;height:285px;">
+</div>
+
+<div id="ComponentlayerDiv" 
+	style="position:absolute;left:210px;top:60px;width:700px;height:795px;">
+</div>
+
+
+<div id="TitleDiv" class="titleDiv">PEBBLE - Picaxe Electronic Bread Board Layout Emulator - V3.1e</div>
+
+<div id="InstructDiv" class="instructDiv">
+<script language="javascript">document.writeln(_("Drag components from the Menu to Breadboard, then Right-Click component to edit"));</script>
+<script language="javascript">document.writeln(_("(For IE >= 6.0 only)"));</script>
+</div>
+
+<div id="TMDiv" class="tmDiv">WA55</div>
+
+<div id="menuctrl" class="menucontrol">
+  <table cellpadding="2" cellspacing="0 ">
+    <tr> 
+      <td colspan="5" align="center">
+
+        <script language="javascript">document.writeln(_("menu location control"));</script>
+      </td>
+    </tr>
+    <tr>
+	<td>
+	<Button type="button" style="font-size:8pt;" onclick="move_left();">
+	<span><script language="javascript">document.writeln(_("Left"));</script></button>
+	</td>
+	<td>
+	<Button type="button" style="font-size:8pt;" onclick="move_center();">
+	<span><script language="javascript">document.writeln(_("Centre"));</script></button>
+	</td>
+	<td>
+	<Button type="button" style="font-size:8pt;" onclick="move_right();">
+	<span><script language="javascript">document.writeln(_("Right"));</script></button>
+	</td>
+	<td>
+	<Button type="button" style="font-size:8pt;" onclick="bringToFront('menudiv');">
+	<span><script language="javascript">document.writeln(_("Front"));</script></button>
+	</td>
+	<td>
+	<Button type="button" style="font-size:8pt;" onclick="sendToBack('menudiv');">
+	<span><script language="javascript">document.writeln(_("Back"));</script></button>
+	<td>
+    </tr>
+   </table>
+</div>
+
+
+<form name="dialogwindowsForm">
+
+<div id="saveload_dialog" class="contextMenu smalltext" style="left:218px;top:80px;" ignoreclick="true">
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="5" class="dialogheading">
+            		<script language="javascript">document.writeln(_("Save and Load PEBBLE Layout Data"));</script>
+               </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+		<td class="smalltext">
+                	<script language="javascript">document.writeln(_("To "));</script>
+		<b>
+                	<script language="javascript">document.writeln(_("Save"));</script>
+                            </b>:
+                            <script language="javascript">document.writeln(_("Copy and paste all text below into a text editor and save it."));</script>
+                            <br>
+                            <script language="javascript">document.writeln(_("To "));</script>
+                            <b>
+                            <script language="javascript">document.writeln(_("Load"));</script>
+                           </b>: 
+                           <script language="javascript">document.writeln(_("Paste previously saved text into this text area and click 'Load Circuit'."));</script>
+                           </td>
+	</tr>
+	<tr>
+		<td><textarea id="stateDisplay" rows="30" cols="60"></textarea></td>
+	</tr>
+
+        <tr>
+             <td colspan="6" >
+	     <Button type="button" onclick="hideAllDialogs();">
+	     <span><script language="javascript">document.writeln(_("Cancel"));</script></button>
+
+	     <Button type="button" onclick="loadCircuit();">
+	     <span><script language="javascript">document.writeln(_("Load Circuit"));</script></button>
+
+	     <Button type="button" onclick="selectAllData();">
+	     <span><script language="javascript">document.writeln(_("Select All"));</script></button>
+             </td>
+       </tr>
+</table>
+</div>
+
+<div id="movecomps_dialog" class="contextMenu smalltext" style="left:218px;top:80px;" ignoreclick="true">
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="5" class="dialogheading">
+                            <script language="javascript">document.writeln(_("Component Vertical Placement Control"));</script>
+                            </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+		<td colspan="6" class="smalltext">
+        <br>&nbsp;
+        <script language="javascript">document.writeln(_("This feature is used to adjust the vertical placement of "));</script>
+        <b>
+        <script language="javascript">document.writeln(_("ALL"));</script>
+        </b> 
+        <script language="javascript">document.writeln(_(" components"));</script>
+ 	<br>&nbsp;
+        <script language="javascript">document.writeln(_("following the Enabling or Disabling of the Top-side Off-board component area."));</script>
+        <br><br>&nbsp;
+        <script language="javascript">document.writeln(_("Button selections below act by moving "));</script> 
+        <b>
+        <script language="javascript">document.writeln(_("ALL"));</script>
+        </b> 
+        <script language="javascript">document.writeln(_(" components as follows:"));</script>
+        <br><br>
+		1. <b>
+                            <script language="javascript">document.writeln(_("Downwards"));</script>
+                            </b>: 
+        <script language="javascript">document.writeln(_("Use when a top side off-board area has been added to the PEBBLE display."));</script>
+        <br>
+		2. <b>
+	              <script language="javascript">document.writeln(_("Up & Drop"));</script>
+                             </b>:  
+        <script language="javascript">document.writeln(_("Use when a top side off-board area has been removed from the PEBBLE"));</script>
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <script language="javascript">document.writeln(_("display and you wish to delete/drop all components from the Top-side Off-board area."));</script>	
+        <br>
+		3. <b>
+	             <script language="javascript">document.writeln(_("Up & Gather"));</script>
+                           </b>: 
+        <script language="javascript">document.writeln(_("Use when a top side off-board area has been removed from the PEBBLE"));</script>
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <script language="javascript">document.writeln(_("display and you wish to gather all components from the Top-side Off-board area at"));</script>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <script language="javascript">document.writeln(_("the top of the breadboard for manual repositioning."));</script>
+                </td>
+	</tr>
+	<tr>
+	     <td>&nbsp;</td>
+	</tr>
+        <tr>
+             <td colspan="6" >
+	     <Button type="button" onclick="hideAllDialogs();">
+	     <span><script language="javascript">document.writeln(_("Cancel"));</script></button>
+
+	     <Button type="button" onclick="moveComponents(1);">
+	     <span><script language="javascript">document.writeln(_("Downwards"));</script></button>
+
+	     <Button type="button" onclick="moveComponents(2);">
+	     <span><script language="javascript">document.writeln(_("Up & Drop"));</script></button>
+
+	     <Button type="button" onclick="moveComponents(3);">
+	     <span><script language="javascript">document.writeln(_("Up & Gather"));</script></button>
+             </td>
+       </tr>
+</table>
+</div>
+
+
+<div id="adjustBB_dialog" class="contextMenu smalltext" style="left:218px;top:80px;" ignoreclick="true">
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="5" class="dialogheading">
+                <script language="javascript">document.writeln(_("Variable Sized Strip-Board Properties"));</script>
+                </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+		<td colspan="6" class="smalltext">
+                <br>&nbsp;<b>
+                <script language="javascript">document.writeln(_("Note:"));</script>
+                </b>
+                <script language="javascript">document.writeln(_("This feature is only valid/functional for the Breadboard "));</script>
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("type : "));</script>
+                &nbsp;<b>
+                <script language="javascript">document.writeln(_("'General Stripboard Max 50 x 71 holes'"));</script>
+                </b><br><br>&nbsp;
+                <script language="javascript">document.writeln(_("You can use these setting to pre-define the breadboard size"));</script>
+		&nbsp;
+                <script language="javascript">document.writeln(_("before selecting the General Stripboard."));</script>
+                <br><br>&nbsp;
+                <script language="javascript">document.writeln(_("Use the Dropdown selectors below to set the Width (Rows)"));</script>
+                <br>&nbsp;
+                <script language="javascript">document.writeln(_("and Height for the desired size of the General Stripboard."));</script>
+
+
+	</tr>
+	<tr>
+		<td align="center" colspan= "2" class="menuheadtext">
+                <script language="javascript">document.writeln(_("Board Width/Rows:"));</script>
+                </td>
+		<td class="tinytext">&nbsp;&nbsp;</td>
+		<td align="center" colspan= "2" class="menuheadtext">
+                <script language="javascript">document.writeln(_("Board Vert Height:"));</script>
+                </td>
+	</tr>
+	<tr>
+		<td align="right" colspan= "1" class="smalltext">
+                <script language="javascript">document.writeln(_("Holes ="));</script>
+                </td>
+		<td align="left" colspan= "1"> <select id="RowSize" class="smalltext">
+			<option value="6">6
+			<option value="7">7
+			<option value="8">8
+			<option value="9">9
+			<option value="10">10
+			<option value="11">11
+			<option value="12">12
+			<option value="13">13
+			<option value="14">14
+			<option value="15">15
+			<option value="16">16
+			<option value="17">17
+			<option value="18">18
+			<option value="19">19
+			<option value="20">20
+			<option value="21">21
+			<option value="22">22
+			<option value="23">23
+			<option value="24">24
+			<option value="25">25
+			<option value="26">26
+			<option value="27">27
+			<option value="28">28
+			<option value="29">29
+			<option value="30">30
+			<option value="31">31
+			<option value="32">32
+			<option value="33">33
+			<option value="34">34
+			<option value="35">35
+			<option value="36">36
+			<option value="37">37
+			<option value="38">38
+			<option value="39">39
+			<option value="40">40
+			<option value="41">41
+			<option value="42">42
+			<option value="43">43
+			<option value="44">44
+			<option value="45">45
+			<option value="46">46
+			<option value="47">47
+			<option value="48">48
+			<option value="49">49
+			<option value="50">50
+			</select></td>
+		<td class="tinytext">&nbsp;&nbsp;</td>	
+		<td align="right" colspan= "1"class="smalltext">
+                <script language="javascript">document.writeln(_("Holes ="));</script>
+                </td>
+		<td align="left" colspan="1"><select id="ColSize" class="smalltext">
+			<option value="10">10
+			<option value="11">11
+			<option value="12">12
+			<option value="13">13
+			<option value="14">14
+			<option value="15">15
+			<option value="16">16
+			<option value="17">17
+			<option value="18">18
+			<option value="19">19
+			<option value="20">20
+			<option value="21">21
+			<option value="22">22
+			<option value="23">23
+			<option value="24">24
+			<option value="25">25
+			<option value="26">26
+			<option value="27">27
+			<option value="28">28
+			<option value="29">29
+			<option value="30">30
+			<option value="31">31
+			<option value="32">32
+			<option value="33">33
+			<option value="34">34
+			<option value="35">35
+			<option value="36">36
+			<option value="37">37
+			<option value="38">38
+			<option value="39">39
+			<option value="40">40
+			<option value="41">41
+			<option value="42">42
+			<option value="43">43
+			<option value="44">44
+			<option value="45">45
+			<option value="46">46
+			<option value="47">47
+			<option value="48">48
+			<option value="49">49
+			<option value="50">50
+			<option value="51">51
+			<option value="52">52
+			<option value="53">53
+			<option value="54">54
+			<option value="55">55
+			<option value="56">56
+			<option value="57">57
+			<option value="58">58
+			<option value="59">59
+			<option value="60">60
+			<option value="61">61
+			<option value="62">62
+			<option value="63">63
+			<option value="64">64
+			<option value="65">65
+			<option value="66">66
+			<option value="67">67
+			<option value="68">68
+			<option value="69">69
+			<option value="70">70
+			<option value="71">71
+			</select></td>	
+		<td class="tinytext">&nbsp;&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td>
+	</tr>
+        <tr>
+             <td colspan="6" >
+	     <Button type="button" onclick="hideAllDialogs();">
+	     <span><script language="javascript">document.writeln(_("Cancel"));</script></button>
+
+	     <Button type="button" onclick="setstripboard(1);">
+	     <span><script language="javascript">document.writeln(_("Default (10 x 10)"));</script></button>
+
+	     <Button type="button" onclick="setstripboard(2);">
+	     <span><script language="javascript">document.writeln(_("Use New Settings"));</script></button>
+             </td>
+       </tr>
+</table>
+</div>
+
+
+<div id="ic_dip_dialog" class="contextMenu smalltext" ignoreclick="true">
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="3" class="dialogheading">
+                <script language="javascript">document.writeln(_("DIP IC Properties"));</script>
+                </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+                <td colspan="4" class="smalltext" >&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Part # : "));</script>
+                &nbsp;<input type="text" size="10" id="ICNAME"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;<select id="ICPACKAGE" class="smalltext">
+                        <option value="DIP4">4 Pin DIP</option>
+                        <option value="DIP6">6 Pin DIP</option>
+                        <option value="DIP8">8 Pin DIP</option>
+                        <option value="DIP12">12 Pin DIP</option>
+                        <option value="DIP14">14 Pin DIP</option>
+                        <option value="DIP16">16 Pin DIP</option>
+                        <option value="DIP18">18 Pin DIP</option>
+                        <option value="DIP20">20 Pin DIP</option>
+                        <option value="DIP24">24 Pin DIP</option>
+                        <option value="DIP28">28 Pin DIP</option>
+                        <option value="DIP40">40 Pin DIP</option>
+                        <option value="School08M">Learners 08M</option>
+                        <option value="PICAXE08">PICAXE 08</option>
+                        <option value="PICAXE08M2">PICAXE 08M2</option>
+                        <option value="PICAXE14">PICAXE 14</option>
+                        <option value="PICAXE14M2">PICAXE 14M2</option>
+                        <option value="PICAXE18">PICAXE 18</option>
+                        <option value="PICAXE18M2">PICAXE 18M2</option>
+                        <option value="PICAXE20">PICAXE 20</option>
+                        <option value="PICAXE20M2">PICAXE 20M2</option>
+                        <option value="PICAXE20X2">PICAXE 20X2</option>
+                        <option value="PICAXE28">PICAXE 28</option>
+                        <option value="PICAXE28X2">PICAXE 28X2</option>
+                        <option value="AXE200">28X2 AXE200 Module</option>
+                        <option value="PICAXE40">PICAXE 40</option>
+                        <option value="PICAXE40X2">PICAXE 40X2</option>
+                        <option value="FRM010">FRM010 ser LCD</option>
+                        <option value="FRM015">FRM015 ser Prntr</option>
+                        <option value="FRM050">FRM050 PWM Mtr DRvr</option>
+                        <option value="UMFPUV2">UM FPU V2 Co-Proc</option>
+                        <option value="UMFPUV3">UM FPU V3 Co-Proc</option>
+                        <option value="L293D"> L293D/SN754410 H-Bridge</option>
+                        <option value="LV8549MC"> LV8549MC SOIC H-Bridge</option>
+                        <option value="ULN2803">ULN2803</option>
+                        <option value="HC7404">74HC04/05/14 Hex Inverter</option>
+                        <option value="HC74164">74HC164 Oct S.Reg</option>
+                        <option value="HC74138">74HC138 3 to 8 Act. Low</option>
+                        <option value="HC74165">74HC165 Oct S.Reg</option>
+                        <option value="HC74174">74HC174 Hex D FF</option>
+                        <option value="HC74195">74HC195 4bit P/S SR</option>
+                        <option value="HC74238">74HC238 3 to 8 Act. High</option>
+                        <option value="HC74595">74HC595 Oct Sh.Reg</option>
+                        <option value="HC744015">74HC4015 2 Quad SR</option>
+                        <option value="HC744051">74HC4051 8-Ch Analog Sw</option>
+                        <option value="HC744052">74HC4052 2 x 4-Ch An Sw</option>
+                        <option value="HC744053">74HC4053 3 x 2-Ch An Sw</option>
+                        <option value="CD4066">CD4066 = 4x An 1Ch Sw</option>
+                        <option value="MC14551B">MC14551 4x An 2Ch Sw</option>
+                        <option value="LVC74245">74LVC245 Oct Trans</option>
+                        <option value="MM74C922">MM74C922 4X4 Kpd Enc</option>
+                        <option value="MM74C923">MM74C923 5X4 Kpd Enc</option>
+                        <option value="RTC1307">RTC 1307</option>
+                        <option value="EEPROM">EEPROM</option>
+                        <option value="PCF8574">PCF8574  8bit i2c IO</option>
+                        <option value="MCP23017">MCP23017 16bit i2c IO</option>
+                        <option value="AMIS30622">AMIS30622 i2c Stepper Ctrl</option>
+                        <option value="MCP41XXX">MCP41XXX SPI dig pot</option>
+                        <option value="MCP42XXX">MCP42XXX SPI dig pot</option>
+                        <option value="MCP4011">MCP4011 up/dn pot</option>
+                        <option value="MCP46X1">MCP46X1 i2c dual pot</option>
+                        <option value="MCP4822">MCP4822 12bit DAC</option>
+                        <option value="SAA1064">SAA1064 i2c 4dig Dr</option>
+                        <option value="MAX7219">MAX7219 8-digit LED driver</option>
+                        <option value="PT6961">PT6961 6-dig 12-seg LED dr.</option>
+                        <option value="WS2801">WS2801  3-Channel LED driver</option>
+                        <option value="WS2803D">WS2803 DIP 18-Channel LED dr.</option>
+                        <option value="WS2803S">WS2803 SOP 18-Channel LED dr.</option>
+                        <option value="CA3140">CA3140 8pin Op-Amp</option>
+                        <option value="OpAmp8">Generic 8pin Op-Amp</option>
+                        <option value="DIP4017">4017 Dec Cntr</option>
+                        <option value="DIP4026">4026 Cntr-7seg</option>
+                        <option value="DIP4066">4066 Quad Analog Sw</option>
+                        <option value="DIP4511">4511 BCD-7seg</option>
+                        <option value="FND500">FND500 12mm 7 Seg</option>
+                        <option value="Inch7seg">25mm high 7 Seg</option>
+                        <option value="Dual7seg">20mm high dual 7 Seg</option>
+                        <option value="Quad7seg"> 9mm high quad 7 Seg</option>
+                        <option value="Opto4">4 Pin Optocouple</option>
+                        <option value="Opto6">6 Pin Optocouple</option>
+                        <option value="Timer555">555 Timer</option>
+                        <option value="Speakjet">SpeakJet Speech Synth</option>
+                        <option value="SY4090">SY4090 MOS Relay</option>
+
+		</select></td>
+	      </tr>
+              <tr>
+		<td>
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td>&nbsp;&nbsp;<img src='images/dip_1_icon.gif'></td>
+				<td><input type="radio" value="1" name="diporient"
+					checked="true"></td>
+				<td>&nbsp;&nbsp;<img src='images/dip_2_icon.gif'></td>
+				<td><input type="radio" value="2" name="diporient"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+
+	<tr>
+	<td style='text-align:right;' colspan="4">
+	     <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	     <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	     <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	     <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	</td>
+	</tr>
+</table>
+</div>
+</table>
+</div>
+
+
+<div id="led_dialog" class="contextMenu smalltext" ignoreclick="true">
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="3" class="dialogheading">
+                <script language="javascript">document.writeln(_("LED Properties"));</script>
+                </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+
+	<tr>
+		<td align="center"><img src="images/led_11.gif"></td>
+		<td align="center"><img src="images/led_12.gif"></td>
+                           <td align="center"><img src="images/led_13.gif"></td>
+                           <td align="center"><img src="images/led_14.gif"></td>
+	</tr>
+	<tr>
+		<td align="center"><img src="images/diode_1_icon.gif"></td>
+		<td align="center"><img src="images/diode_2_icon.gif"></td>
+		<td align="center"><img src="images/diode_3_icon.gif"></td>
+		<td align="center"><img src="images/diode_4_icon.gif"></td>
+	</tr>
+	<tr>
+		<td align="center"><input type="radio" name="ledorient"
+			value="1" checked="true"></td>
+		<td align="center"><input type="radio" name="ledorient"
+			value="2"></td>
+		<td align="center"><input type="radio" name="ledorient"
+			value="3"></td>
+		<td align="center"><input type="radio" name="ledorient"
+			value="4"></td>
+	</tr>
+              <tr>
+		<td colspan="4" class="smalltext" >&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Select Colour : "));</script>
+                &nbsp;<select id="LEDCOLOR" class="smalltext">
+			<option value="1">
+                        <script language="javascript">document.writeln(_("Red"));</script>
+                        </option>
+			<option value="2">
+                        <script language="javascript">document.writeln(_("Green"));</script>
+                        </option>
+			<option value="3">
+                        <script language="javascript">document.writeln(_("Yellow"));</script>
+                        </option>
+			<option value="4">
+                        <script language="javascript">document.writeln(_("Blue"));</script>
+                        </option>
+			<option value="5">
+                        <script language="javascript">document.writeln(_("White"));</script>
+                        </option>
+		</select></td>
+	</tr>
+	<tr>
+	<td style='text-align:right;' colspan="4">
+	     <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	     <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	     <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	     <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	</td>
+	</tr>
+</table>
+</div>
+
+<div id="transistor_dialog" class="contextMenu smalltext" ignoreclick="true">
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="5" class="dialogheading">
+                <script language="javascript">document.writeln(_("Transistor Properties"));</script>
+                </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+                <td colspan="4" class="smalltext" >&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Type: "));</script> 
+                &nbsp;<input type="text" size="10" id="TRANSISTORVALUE"></td>
+              </tr>
+	<tr>
+		<td colspan="4" class="smalltext" >&nbsp;&nbsp;
+               <script language="javascript">document.writeln(_("Pins: "));</script>
+               &nbsp;<input type="text" size="10" id="TRANSISTORPINS"></td>
+	</tr>
+              <tr>
+		<td colspan="4" class="smalltext">&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Package:"));</script>
+                </td>    
+	</tr>
+              <tr>
+		<td colspan="4">
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td>&nbsp;&nbsp;<img src='images/transistor_1_icon.gif'></td>
+				<td><input type="radio" value="1" name="transistorpackage"
+					checked="true"></td>
+				<td>&nbsp;&nbsp;<img src='images/transistor_2_icon.gif'></td>
+				<td><input type="radio" value="2" name="transistorpackage"></td>
+			</tr>
+		</table>
+		</td>
+	 </tr>
+               <tr>
+		<td colspan="4" class="smalltext">&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Orientation:"));</script>
+                </td>
+	</tr>
+
+	<tr>
+		<td align="center">&nbsp;&nbsp;<img src="images/transistor_1_icon.gif"></td>
+		<td align="center">&nbsp;&nbsp;<img src="images/transistor_1b_icon.gif"></td>
+		<td align="center">&nbsp;&nbsp;<img src="images/transistor_1c_icon.gif"></td>
+		<td align="center">&nbsp;&nbsp;<img src="images/transistor_1d_icon.gif"></td>
+		<td align="center">&nbsp;&nbsp;&nbsp;<img src="images/transistor_1e_icon.gif">&nbsp;</td>
+		<td align="center">&nbsp;&nbsp;&nbsp;<img src="images/transistor_1f_icon.gif">&nbsp;</td>
+	</tr>
+	<tr>
+		<td align="center"><input type="radio" name="transistororient"
+			value="1" checked="true"></td>
+		<td align="center"><input type="radio" name="transistororient"
+			value="2"></td>
+		<td align="center"><input type="radio" name="transistororient"
+			value="3"></td>
+		<td align="center">&nbsp;<input type="radio" name="transistororient"
+			value="4"></td>
+		<td align="center">&nbsp;<input type="radio" name="transistororient"
+			value="5";></td>
+		<td align="center">&nbsp;<input type="radio" name="transistororient"
+			value="6"></td>
+
+	</tr>
+	<tr>
+	<td style='text-align:right;' colspan="4">
+	     <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	     <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	     <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	     <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	</td>
+</table>
+</div>
+
+
+<div id="diode_dialog" class="contextMenu smalltext" ignoreclick="true">
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="3" class="dialogheading">
+                <script language="javascript">document.writeln(_("Diode Properties"));</script>
+
+                </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+                <td colspan="4" class="smalltext" >&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Part # : "));</script>
+                &nbsp;<input type="text" size="10" id="DIODENAME"></td>
+	</tr>
+              <tr>
+		<td colspan="4" class="smalltext">&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Package:"));</script></td>
+	</tr>
+              <tr>
+		<td colspan="4">
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td>&nbsp; <img src='images/diode_10_icon.gif'></td>
+				<td><input type="radio" value="1" name="diodepackage"
+					checked="true"></td>
+				<td>&nbsp; &nbsp; <img src='images/diode_20_icon.gif'></td>
+				<td><input type="radio" value="2" name="diodepackage"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+               <tr>
+		<td colspan="4" class="smalltext" >&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Image : "));</script>
+                &nbsp;<select id="DIODESIZE" class="smalltext">
+			<option value="0">
+                        <script language="javascript">document.writeln(_("Vertical"));</script>
+                        </option>     // Span 1
+			<option value="1">
+                        <script language="javascript">document.writeln(_("Small"));</script>
+
+			</option>     // Span 2
+			<option value="2">
+                        <script language="javascript">document.writeln(_("Medium"));</script>
+			</option>     // Span 3
+			<option value="3">
+                        <script language="javascript">document.writeln(_("Large"));</script>
+			</option>     // Span 4
+		</select></td>
+	</tr>
+	<tr>
+		<td align="center">&nbsp;<img src="images/diode_1_icon.gif"></td>
+		<td align="center"><img src="images/diode_2_icon.gif"></td>
+		<td align="center"><img src="images/diode_3_icon.gif"></td>
+		<td align="center"><img src="images/diode_4_icon.gif"></td>
+	</tr>
+	<tr>
+		<td align="center"><input type="radio" name="diodeorient"
+			value="1" checked="true"></td>
+		<td align="center"><input type="radio" name="diodeorient"
+			value="2"></td>
+		<td align="center"><input type="radio" name="diodeorient"
+			value="3"></td>
+		<td align="center"><input type="radio" name="diodeorient"
+			value="4"></td>
+	</tr>
+	<tr>
+	<td style='text-align:right;' colspan="4">
+	     <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	     <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	     <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	     <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	</td>
+	</tr>
+</table>
+</div>
+
+
+<div id="capacitor_dialog" class="contextMenu smalltext"
+	ignoreclick="true">
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="4" class="dialogheading">
+                            <script language="javascript">document.writeln(_("Capacitor Properties"));</script>
+                            </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+                <td colspan="5" class="smalltext" >&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Value : "));</script>
+                &nbsp;<input type="text" size="10" id="CAPVALUE"></td>
+        </tr>
+        <tr>
+		<td colspan="5" class="smalltext">&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Package:"));</script>
+                </td>
+        </tr>
+        <tr>
+		<td align="center">&nbsp;<img src="images/cap_1_icon.gif"></td>
+		<td align="center"><img src="images/cap_2_icon.gif"></td>
+                <td align="center"><img src="images/cap_3_icon.gif"></td>
+                <td align="center"><img src="images/cap_4_icon.gif"></td>
+                <td align="center"><img src="images/cap_5_icon.gif"></td>
+	</tr>
+	<tr>
+		<td align="center"><input type="radio" name="cappackage"
+			value="1" checked="true"></td>
+		<td align="center"><input type="radio" name="cappackage"
+			value="2"></td>
+		<td align="center"><input type="radio" name="cappackage"
+			value="3"></td>
+		<td align="center"><input type="radio" name="cappackage"
+			value="4"></td>
+		<td align="center"><input type="radio" name="cappackage"
+			value="5"></td>
+	 </tr>
+         <tr>
+                <td colspan="5" class="smalltext" >&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Image : "));</script>
+                &nbsp;<select id="CAPSIZE" class="smalltext">
+			<option value="1">
+                        <script language="javascript">document.writeln(_("Small"));</script>
+			</option>     // Span 2
+			<option value="2">
+                        <script language="javascript">document.writeln(_("Medium"));</script>
+			</option>     // Span 3
+			<option value="3">
+                        <script language="javascript">document.writeln(_("Large"));</script>
+			</option>     // Span 4
+                        </select></td>
+	</tr>
+        <tr>
+		<td align="center"><img src="images/caporient1.gif"></td>
+		<td align="center"><img src="images/caporient2.gif"></td>
+		<td align="center"><img src="images/caporient3.gif"></td>
+		<td align="center"><img src="images/caporient4.gif"></td>
+	</tr>
+
+        <tr>
+		<td align="center"><input type="radio" name="caporient" value="1" checked="true"></td>
+		<td align="center"><input type="radio" name="caporient" value="2"></td>
+		<td align="center"><input type="radio" name="caporient" value="3"></td>
+		<td align="center"><input type="radio" name="caporient" value="4"></td>
+	</tr>
+	<tr>
+	<td style='text-align:right;' colspan="5">
+	     <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	     <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	     <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	     <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	</td>
+	</tr>
+</table>
+</div>
+
+
+<div id="terminal_dialog" class="contextMenu smalltext" ignoreclick="true">
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="3" class="dialogheading">
+                            <script language="javascript">document.writeln(_("Terminal Properties"));</script>
+                           </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+                <td colspan="2" class="smalltext" >&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Label: "));</script>
+                &nbsp;<input type="text" size="10" id="TERMINALNAME"></td>
+	</tr>
+              <tr>
+		<td colspan="2" class="smalltext">&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Terminal Type: "));</script>
+                </td>
+	</tr>
+              <tr>
+		<td colspan="2" class="smalltext" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="terminalpackage" class="smalltext">
+			<option value="1">
+                        <script language="javascript">document.writeln(_("Program Socket Up/Down Orientated"));</script>
+                        </option>
+			<option value="13">
+                        <script language="javascript">document.writeln(_("Program Socket Left/Right Orientated"));</script>
+                        </option>
+			<option value="16">
+                        <script language="javascript">document.writeln(_("Program Socket Vertical for StripBoard"));</script>
+                        </option>
+			<option value="2">
+                        <script language="javascript">document.writeln(_("Screw Terminal"));</script>
+                        </option>
+			<option value="12">
+                        <script language="javascript">document.writeln(_("Spring Terminals @ 2.54mm centres"));</script>
+                        </option>
+			<option value="15">
+                        <script language="javascript">document.writeln(_("Spring Terminals @ 5mm centre 2/3way"));</script>
+                        </option>
+			<option value="3">
+                        <script language="javascript">document.writeln(_("Header Socket"));</script>
+                        </option>
+			<option value="4">
+                        <script language="javascript">document.writeln(_("Header Pins"));</script>
+                        </option>
+			<option value="5">
+                        <script language="javascript">document.writeln(_("Header Locking"));</script>
+                        </option>
+			<option value="14">
+                        <script language="javascript">document.writeln(_("Vert Boxed Header 2 x 5-way"));</script>
+                        </option>
+			<option value="6">
+                        <script language="javascript">document.writeln(_("SIL Modules"));</script>
+                        </option>
+			<option value="7">AXE029
+                        <script language="javascript">document.writeln(_("for 18 (set as 4-way)"));</script>
+                        </option>
+			<option value="8">AXE029
+                        <script language="javascript">document.writeln(_("for 28/40 (set as 4-way)"));</script>
+                        </option>
+			<option value="9">HH10D
+                        <script language="javascript">document.writeln(_("Humidity (set as 5-way"));</script>
+                        </option>
+			<option value="10">HP03S
+                        <script language="javascript">document.writeln(_("Pressure (set as 6-way)"));</script>
+                        </option>
+			<option value="11">HP03D
+                        <script language="javascript">document.writeln(_("Pressure (set as 6-way)"));</script>
+                        </option>
+// NOTE: highest option above is 16
+
+		</select></td>
+	</tr>
+              <tr>
+		<td colspan="2" class="smalltext" >&nbsp;&nbsp;
+                <script language="javascript">document.writeln(_("Strip Width: "));</script>
+                &nbsp;&nbsp;&nbsp;<select id="TERMINALSIZE" class="smalltext">
+			<option value="2">2-way </option>
+			<option value="3">3-way </option>
+			<option value="4">4-way </option>
+			<option value="5">5-way </option>
+			<option value="6">6-way </option>
+			<option value="7">7-way </option>
+			<option value="8">8-way </option>
+			<option value="9">9-way </option>
+		</select></td>
+	</tr>
+              <tr>
+		<td colspan="2">
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td><img src='images/terminal_1_icon.gif'></td>
+				<td><input type="radio" value="1" name="terminalorient"
+					checked="true"></td>
+				<td><img src='images/terminal_2_icon.gif'></td>
+				<td><input type="radio" value="2" name="terminalorient"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+	<td style='text-align:right;' colspan="4">
+	     <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	     <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	     <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	     <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	</td>
+	</tr>
+</table>
+</div>
+
+
+<input type="hidden" name="wirecolor" value="#0000FF;">
+<div id="wire_dialog" class="contextMenu smalltext" ignoreclick="true">
+
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="3" class="dialogheading">
+                            <script language="javascript">document.writeln(_("Insulated Wire Properties"));</script>
+                           </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+
+	<tr>
+		<td>
+		   <table cellpadding="0" cellspacing="1">
+		      <script language="javascript"> document.writeln(generateColorChooser()); </script>
+		   </table>
+		</td>
+
+	        <td>
+		   <table cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan= "4" class="menuheadtext">&nbsp;
+                                                       <script language="javascript">document.writeln(_("Orientation:"));</script>
+                                                       </td>
+			</tr>
+			<tr>
+				<td><img src='images/horzicon.gif'></td>
+				<td align="left"><input type="radio" value="1" name="wireorient"
+					checked="true"></td>
+				<td class="tinytext"> &nbsp;</td>
+				<td><img src='images/verticon.gif'></td>
+				<td align="left"><input type="radio" value="2" name="wireorient"></td>
+			</tr>
+			<tr>
+				<td colspan= "4"class="menuheadtext">&nbsp;
+                                                       <script language="javascript">document.writeln(_("Wire Length:"));</script>
+                                                       </td>
+			</tr>
+			<tr>	
+				<td colspan="4"><select id="WIRELENGTH" class="smalltext">
+					<option value="1">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        1</option>
+					<option value="2">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        2</option>
+					<option value="3">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        3</option>
+					<option value="4">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        4</option>
+					<option value="5">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        5</option>
+					<option value="6">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        6</option>
+					<option value="7">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        7</option>
+					<option value="8">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        8</option>
+					<option value="9">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        9</option>
+					<option value="10">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        10</option>
+					<option value="11">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        11</option>
+					<option value="12">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        12</option>
+					<option value="13">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        13</option>
+					<option value="14">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        14</option>
+					<option value="15">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        15</option>
+					<option value="16">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        16</option>
+					<option value="17">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        17</option>
+					<option value="18">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        18</option>
+					<option value="19">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        19</option>
+					<option value="20">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        20</option>
+					<option value="21">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        21</option>
+					<option value="22">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        22</option>
+					<option value="23">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        23</option>
+					<option value="24">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        24</option>
+					<option value="25">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        25</option>
+					<option value="26">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        26</option>
+					<option value="27">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        27</option>
+					<option value="28">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        28</option>
+					<option value="29">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        29</option>
+					<option value="30">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        30</option>
+					<option value="31">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        31</option>
+					<option value="32">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        32</option>
+					<option value="33">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        33</option>
+					<option value="34">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        34</option>
+					<option value="35">
+                                        <script language="javascript">document.writeln(_("Span "));</script>
+                                        35</option>
+				</select></td>
+			</tr>
+			<tr>	<td colspan= "4"class="menuheadtext">&nbsp;
+                                <script language="javascript">document.writeln(_("Wire Level:"));</script>
+                                </td>
+			</tr>
+			<tr>
+				<td colspan="4"><select id="WIRELEVEL" class="smalltext">
+					<option value="10">
+                                        <script language="javascript">document.writeln(_("Standard"));</script>
+                                        </option>
+					<option value="8">
+                                        <script language="javascript">document.writeln(_("Under"));</script>
+                                        </option>
+					<option value="12">
+                                        <script language="javascript">document.writeln(_("Above"));</script>
+                                        </option>
+				</select></td>
+			</tr>
+		</table>
+	      </td>
+
+	      <td>
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="5" class="menuheadtext">&nbsp;&nbsp;
+                                <script language="javascript">document.writeln(_("Wire Body Offset:"));</script>
+                                </td>
+			</tr>
+			<tr>
+				<td align="right"><input type="radio" name="wireoffset"
+					value="1" checked="true"></td>
+				<td colspan="4" class="tinytext">
+                                <script language="javascript">document.writeln(_("On the line"));</script>
+                                </td>
+			</tr>
+			<tr>
+				<td align="right"><input type="radio" name="wireoffset"
+					value="2"></td>
+				<td colspan="4" class="tinytext">1/3
+                                <script language="javascript">document.writeln(_(" space above/left"));</script>
+                                </td>
+			</tr>
+			<tr>
+				<td align="right"><input type="radio" name="wireoffset"
+					value="3"></td>
+				<td colspan="4" class="tinytext">1/3
+                                <script language="javascript">document.writeln(_(" space below/right"));</script>
+                                </td>
+			</tr>
+			<tr>
+				<td class="tinytext">&nbsp</td>
+			</tr>
+			<tr>
+	<td style='text-align:right;' colspan="4">
+	     <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	     <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	     <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	     <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	</td>
+			</tr>
+			<tr>
+				<td class="tinytext">&nbsp</td>
+			</tr>
+		</table>
+	      </td>
+	</tr>
+
+              <tr>
+		<td  colspan="3" >
+		<table cellpadding="0" cellspacing="0">
+              		<tr>
+				<td colspan="7" class="menuheadtext">
+                                <script language="javascript">document.writeln(_("Top or Left Wire End:"));</script>
+                                </td>
+              		</tr>
+			<tr>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("Bare &"));</script>
+                                </td>
+				<td class="tinytext"> &nbsp;</td>
+				<td colspan= "6" class="tinytext">&nbsp;&nbsp;
+                                <script language="javascript">document.writeln(_("Insulated and going"));</script>
+                                </td>
+				<td colspan= "6" class="tinytext">&nbsp;
+                                <script language="javascript">document.writeln(_("If insulated, then end aligns"));</script>
+                                <td>
+			</tr>
+			<tr>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("to hole"));</script>
+                                </td>
+				<td class="tinytext">&nbsp &nbsp;</td>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("up/left "));</script>
+                                </td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("straight"));</script>
+                                </td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("down/right"));</script>
+                                </td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("up/left "));</script>
+                                </td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("to hole"));</script>
+                                </td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("down/right"));</script>
+                                </td>
+			</tr>
+			<tr>
+				<td align="center"><input type="radio" name="wire1end"
+					value="1" checked="true"></td>
+				<td class="tinytext">&nbsp;</td>
+				<td align="center"><input type="radio" name="wire1end"
+					value="2"></td>
+				<td class="tinytext">&nbsp;</td>
+				<td align="center"><input type="radio" name="wire1end"
+					value="3"></td>
+				<td class="tinytext">&nbsp;</td>
+				<td align="center"><input type="radio" name="wire1end"
+					value="4"></td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">&nbsp;</td>
+				<td align="center"><input type="radio" name="end1off"
+					value="1" checked="true"></td>
+				<td class="tinytext">&nbsp;</td>
+				<td align="center"><input type="radio" name="end1off"
+					value="2"></td>
+				<td class="tinytext"> &nbsp;</td>
+				<td align="center"><input type="radio" name="end1off"
+					value="3"></td>
+			</tr>
+		</table>
+		</td >
+	</tr>
+	<tr>
+		<td  colspan="3" >
+		<table cellpadding="0" cellspacing="0">
+              		<tr>
+				<td colspan="7" class="menuheadtext">
+                                <script language="javascript">document.writeln(_("Bottom or Right Wire End:"));</script>
+                                </td>
+              		</tr>
+			<tr>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("Bare &"));</script>
+                                </td>
+				<td class="tinytext"> &nbsp;</td>
+				<td colspan= "6" class="tinytext">&nbsp;&nbsp;
+                                <script language="javascript">document.writeln(_("Insulated and going"));</script>
+                                </td>
+				<td colspan= "6" class="tinytext">&nbsp;
+                                <script language="javascript">document.writeln(_("If insulated, then end aligns"));</script>
+                                <td>
+			</tr>
+			<tr>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("to hole"));</script>
+                                </td>
+				<td class="tinytext">&nbsp &nbsp;</td>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("up/left "));</script>
+                                </td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("straight"));</script>
+                                </td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("down/right"));</script>
+                                </td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("up/left "));</script>
+                                </td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("to hole"));</script>
+                                </td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">
+                                <script language="javascript">document.writeln(_("down/right"));</script>
+                                </td>
+			</tr>
+			<tr>
+				<td align="center"><input type="radio" name="wire2end"
+					value="1" checked="true"></td>
+				<td class="tinytext"> &nbsp;</td>
+				<td align="center"><input type="radio" name="wire2end"
+					value="2"></td>
+				<td class="tinytext"> &nbsp;</td>
+				<td align="center"><input type="radio" name="wire2end"
+					value="3"></td>
+				<td class="tinytext"> &nbsp;</td>
+				<td align="center"><input type="radio" name="wire2end"
+					value="4"></td>
+				<td class="tinytext">&nbsp;</td>
+				<td class="tinytext">&nbsp;</td>
+				<td align="center"><input type="radio" name="end2off"
+					value="1" checked="true"></td>
+				<td class="tinytext">&nbsp;</td>
+				<td align="center"><input type="radio" name="end2off"
+					value="2"></td>
+				<td class="tinytext">&nbsp;</td>
+				<td align="center"><input type="radio" name="end2off"
+					value="3"></td>
+			</tr>
+		</table>
+		</td >
+	</tr>
+</table>
+</div>
+
+
+<div id="switch_dialog" class="contextMenu smalltext" ignoreclick="true">
+<table cellpadding="2" cellspacing="0">
+	<tr>
+	       <td colspan="3" class="dialogheading">
+                     <script language="javascript">document.writeln(_("Switch Properties"));</script>
+                     </td>
+	       <td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+                    <td colspan="4" class="smalltext" >&nbsp;
+                   <script language="javascript">document.writeln(_("Label: "));</script>
+                    &nbsp;<input type="text" size="10" id="SWITCHNAME">
+                    </td>
+	</tr>
+	<tr>
+	      <td colspan="4" class="smalltext">&nbsp;
+                    <script language="javascript">document.writeln(_("Package:"));</script>
+                    </td>
+	<tr>
+		<td align="center"><img src="images/switch_1_icon.gif"></td>
+		<td align="center"><img src="images/switch_2_icon.gif"></td>
+		<td align="center"><img src="images/switch_3_icon.gif"></td>
+ 	</tr>
+ 	<tr>
+		<td align="center"><input type="radio" name="switchpackage"
+			value="1" checked="true"></td>
+		<td align="center"><input type="radio" name="switchpackage"
+			value="2"></td>
+		<td align="center"><input type="radio" name="switchpackage"
+			value="3"></td>
+	 </tr>
+              <tr>
+		<td colspan="4" class="smalltext" >&nbsp;
+                <script language="javascript">document.writeln(_("Wire Cols: "));</script>
+                &nbsp;<select id="SWITCHCOLOR" class="smalltext">
+			<option value="1">Blu + Grn [+ Orn]</option>
+			<option value="2">Red + Grn [+ Gry]</option>
+			<option value="3">Yel + Grn [+ Blk]</option>
+			<option value="4">Brn + Vio [+ Orn]</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td align="center"><img src="images/switch_1_orient.gif"></td>
+		<td align="center"><img src="images/switch_2_orient.gif"></td>
+		<td align="center"><img src="images/switch_3_orient.gif"></td>
+		<td align="center"><img src="images/switch_4_orient.gif"></td>
+	</tr>
+	<tr>
+		<td align="center"><input type="radio" name="switchorient"
+			value="1" checked="true"></td>
+		<td align="center"><input type="radio" name="switchorient"
+			value="2"></td>
+		<td align="center"><input type="radio" name="switchorient"
+			value="3" checked="true"></td>
+		<td align="center"><input type="radio" name="switchorient"
+			value="4"></td>
+	</tr>
+	<tr>
+	<td style='text-align:right;' colspan="4">
+	     <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	     <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	     <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	     <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	</td>
+	</tr>
+</table>
+</div>
+
+<div id="dipsw_dialog" class="contextMenu smalltext" ignoreclick="true">
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="3" class="dialogheading">
+                <script language="javascript">document.writeln(_("Switch Properties"));</script>
+                </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+                <td colspan="4" class="smalltext" >&nbsp;
+                <script language="javascript">document.writeln(_("Label: "));</script>
+                &nbsp;<input type="text" size="10" id="DIPSWNAME">
+                </td>
+	</tr>
+
+	<tr>
+		<td class="smalltext" >&nbsp;
+                <script language="javascript">document.writeln(_("Size: "));</script>
+                &nbsp;&nbsp;&nbsp;<select id="DIPSWSIZE" class="smalltext">
+			<option value="1">
+                        <script language="javascript">document.writeln(_("Hex rotary"));</script>
+                        </option>
+			<option value="2">2
+                        <script language="javascript">document.writeln(_(" switches"));</script>
+                        </option>
+			<option value="3">3
+                        <script language="javascript">document.writeln(_(" switches"));</script>
+                        </option>
+			<option value="4">4
+                        <script language="javascript">document.writeln(_(" switches"));</script>
+                        </option>
+			<option value="5">5
+                        <script language="javascript">document.writeln(_(" switches"));</script>
+                        </option>
+			<option value="6">6
+                        <script language="javascript">document.writeln(_(" switches"));</script>
+                        </option>
+			<option value="7">7
+                        <script language="javascript">document.writeln(_(" switches"));</script>
+                        </option>
+			<option value="8">8
+                        <script language="javascript">document.writeln(_(" switches"));</script>
+                        </option>
+			<option value="9">9
+                        <script language="javascript">document.writeln(_(" switches"));</script>
+                        </option>
+			<option value="0">10
+                        <script language="javascript">document.writeln(_(" switches"));</script>
+                        </option>
+			<option value="10">
+                        <script language="javascript">document.writeln(_("Sml Tactile Sw"));</script>
+                        </option>
+			<option value="11">
+                        <script language="javascript">document.writeln(_("Lrg Tactile Sw"));</script>
+                        </option>
+		</select></td>
+	<tr>
+	<td style='text-align:right;' colspan="4">
+	     <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	     <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	     <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	     <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	</td>
+	</tr>
+</table>
+</div>
+
+
+<div id="miscell_dialog" class="contextMenu smalltext" ignoreclick="true">
+  <table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="3" class="dialogheading">
+                            <script language="javascript">document.writeln(_("Miscellaneous"));</script>
+                           <script language="javascript">document.writeln(_(" Device Selection"));</script>
+                          </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+                           <td colspan="4" class="smalltext" >&nbsp;
+                           <script language="javascript">document.writeln(_("Label: "));</script>
+                           &nbsp;&nbsp;&nbsp;<input type="text" size="10" id="MISCNAME"></td>
+	</tr>
+	<tr>
+		<td class="smalltext" >&nbsp;
+                            <script language="javascript">document.writeln(_("Device: "));</script> 
+                            &nbsp;<select id="miscpackage" class="smalltext">
+			<option value="1">
+                        		<script language="javascript">document.writeln(_("LDR"));</script>
+                        		</option>
+			<option value="2">
+                        		<script language="javascript">document.writeln(_("Thermistor"));</script>
+                        		</option>
+			<option value="3">
+                        		<script language="javascript">document.writeln(_("Resonator"));</script>
+                        		</option>
+			<option value="4">
+                        		<script language="javascript">document.writeln(_("Clock Crystal"));</script>
+                        		</option>
+
+			<option value="5">
+                        		<script language="javascript">document.writeln(_("Piezo Buzzer"));</script>
+                        		</option>
+			<option value="6">
+                        		<script language="javascript">document.writeln(_("Piezo Speaker"));</script>
+                        		</option>
+			<option value="7">
+                        		<script language="javascript">document.writeln(_("Pot - shaft left"));</script>
+                        		</option>
+			<option value="8">
+                        		<script language="javascript">document.writeln(_("Pot - shaft right"));</script>
+                        		</option>
+			<option value="25">
+                        		<script language="javascript">document.writeln(_("TrimPot - Horiz."));</script>
+                        		</option>
+			<option value="26">
+                        		<script language="javascript">document.writeln(_("TrimPot - Vert m/t"));</script>
+                        		</option>
+			<option value="42">SPST
+                        		<script language="javascript">document.writeln(_(" Pushbutton"));</script>
+			</option>
+			<option value="9">
+                        		<script language="javascript">document.writeln(_("Battery "));</script>
+			2AA
+                        		<script language="javascript">document.writeln(_(" End to End"));</script>
+                        		</option>
+			<option value="10">
+			<script language="javascript">document.writeln(_("Battery "));</script>
+			3AA
+			<script language="javascript">document.writeln(_(" End to End"));</script>
+			</option>
+			<option value="11">
+			<script language="javascript">document.writeln(_("Battery "));</script>
+			4AA
+			<script language="javascript">document.writeln(_(" End to End"));</script>
+			</option>
+			<option value="12">
+			<script language="javascript">document.writeln(_("Battery "));</script>
+			2AA
+			<script language="javascript">document.writeln(_(" Side by Side"));</script>
+			<option value="13">
+			<script language="javascript">document.writeln(_("Battery "));</script>
+			3AA
+			<script language="javascript">document.writeln(_(" Side by Side"));</script>
+			</option>
+			<option value="14">
+			<script language="javascript">document.writeln(_("Battery "));</script>
+			4AA
+			<script language="javascript">document.writeln(_(" Side by Side"));</script>
+			</option>
+			<option value="45">
+			<script language="javascript">document.writeln(_("LiPo Single AA Cell - Horiz"));</script>
+			</option>
+			<option value="46">
+			<script language="javascript">document.writeln(_("LiPo Single AA Cell - Vert"));</script>
+			</option>
+			<option value="15">
+			<script language="javascript">document.writeln(_("Battery "));</script>
+			9V</option>
+			<option value="24">
+			<script language="javascript">document.writeln(_("Battery "));</script>
+			CR2032</option>
+			<option value="16">LCD AXE033 
+			<script language="javascript">document.writeln(_(" Serial"));</script>
+			</option>
+			<option value="17">LCD AXE033 i2c
+			</option>
+			<option value="18">LCD - 
+			<script language="javascript">document.writeln(_(" Parallel"));</script>
+			</option>
+			<option value="31">LCD - 
+			<script language="javascript">document.writeln(_(" Par +"));</script>
+			<script language="javascript">document.writeln(_(" Backlight"));</script>
+			</option>
+			<option value="37">SRF005
+			<script language="javascript">document.writeln(_(" Ultrasonic"));</script>
+			</option>
+			<option value="38">SRF008 i2c
+			<script language="javascript">document.writeln(_(" Ultrasonic"));</script>
+			</option>
+			<option value="39">SPE030 - i2c
+			<script language="javascript">document.writeln(_(" control"));</script>
+			</option>
+			<option value="40">SPE030 - 
+			<script language="javascript">document.writeln(_(" switch control"));</script>
+			</option>
+			<option value="41">CMPS03 
+			<script language="javascript">document.writeln(_(" Compass Module"));</script>
+			</option>
+			<option value="19">
+			<script language="javascript">document.writeln(_("Motor - shaft left"));</script>
+			</option>
+			<option value="20">
+			<script language="javascript">document.writeln(_("Motor - shaft right"));</script>
+			</option>
+			<option value="21">
+			<script language="javascript">document.writeln(_("Servo Motor"));</script>
+			</option>
+			<option value="22">
+			<script language="javascript">document.writeln(_("Unipolar Stepper"));</script>
+			</option>
+			<option value="23">
+			<script language="javascript">document.writeln(_("Bipolar Stepper"));</script>
+			</option>
+			<option value="27">4 x 3 
+			<script language="javascript">document.writeln(_(" Keypad"));</script>
+			</option>
+			<option value="28">4 x 4
+			<script language="javascript">document.writeln(_(" Keypad"));</script>
+			</option>
+			<option value="29">SPDT
+			<script language="javascript">document.writeln(_(" Relay"));</script>
+			</option>
+			<option value="30">DPDT
+			<script language="javascript">document.writeln(_(" Relay"));</script>
+			</option>
+			<option value="32">
+			<script language="javascript">document.writeln(_("Test Pin - 1 Hole"));</script>
+			</option>
+			<option value="33">
+			<script language="javascript">document.writeln(_("Test Socket - 1 Hole"));</script>
+			</option>
+			<option value="34">
+			<script language="javascript">document.writeln(_("2-Pin Bridge - Horizontal"));</script>
+			</option>
+			<option value="35">
+			<script language="javascript">document.writeln(_("2-Pin Bridge - Vertical"));</script>
+			</option>
+			<option value="43">
+			<script language="javascript">document.writeln(_("NC - No Connection Ind"));</script>
+			</option>
+			<option value="44">
+			<script language="javascript">document.writeln(_("RadioShack 276-159 Board"));</script>
+			</option>
+		</select></td>
+	</tr>
+	<tr>
+	<td style='text-align:right;' colspan="4">
+	     <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	     <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	     <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	     <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	</td>
+	</tr>
+  </table>
+</div>
+
+<div id="fourd_dialog" class="contextMenu smalltext" ignoreclick="true">
+  <table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="3" class="dialogheading">4D Systems
+                           <script language="javascript">document.writeln(_(" Device Selection"));</script>
+                           </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+                            <td colspan="4" class="smalltext" >&nbsp;
+                           <script language="javascript">document.writeln(_("Label: "));</script>
+                           &nbsp;&nbsp;&nbsp;<input type="text" size="10" id="FOURDNAME"></td>
+	</tr>
+	<tr>
+		<td class="smalltext" >&nbsp;
+                           <script language="javascript">document.writeln(_("Device: "));</script> 
+                           &nbsp;<select id="fourdpackage" class="smalltext">
+			<option value="1">4D uOLED-96-G1
+                                          <script language="javascript">document.writeln(_(" for "));</script>
+                                          Devboard-G1</option>
+			<option value="2">4D uOLED-96-G1
+                                          <script language="javascript">document.writeln(_(" for "));</script>
+                                          std BrBrd</option>
+			<option value="3">4D uOLED-128-G1
+                                          <script language="javascript">document.writeln(_(" for "));</script>
+                                          Devboard-G1</option>
+			<option value="4">4D uOLED-128-G1
+                                          <script language="javascript">document.writeln(_(" for "));</script>
+                                          std BrBrd</option>
+			<option value="5">4D uOLED-160-G1
+                                          <script language="javascript">document.writeln(_(" for "));</script>
+                                          Devboard-G1</option>
+			<option value="6">4D uOLED-160-G1
+                                          <script language="javascript">document.writeln(_(" for "));</script>
+                                          std BrBrd</option>
+			<option value="7">4D uUSB-CE5
+                                          <script language="javascript">document.writeln(_(" for "));</script>
+                                          Devboard-G1</option>
+			<option value="8">4D uUSB-CE5
+                                          <script language="javascript">document.writeln(_(" for "));</script>
+                                          std BrBrd</option>
+			<option value="9">4D uUSB-MB5
+                                          <script language="javascript">document.writeln(_(" for "));</script>
+                                          Devboard-G1</option>
+			<option value="10">4D uUSB-MB5
+                                          <script language="javascript">document.writeln(_(" for "));</script>
+                                          std BrBrd</option>
+			<option value="11">4D uUSB 
+                                          <script language="javascript">document.writeln(_(" Module"));</script>
+                                          </option>
+			<option value="12">4D uDRIVE
+                                          <script language="javascript">document.writeln(_(" to "));</script>
+                                          uUSB-CE5
+                                          <script language="javascript">document.writeln(_(" or "));</script>
+                                          MB5</option>
+			<option value="13">4D uDRIVE
+                                          <script language="javascript">document.writeln(_(" Module"));</script>
+                                          <script language="javascript">document.writeln(_(" to "));</script>
+                                          std BrBrd</option>
+			<option value="14">4D uCAM
+                                          <script language="javascript">document.writeln(_(" Module"));</script>
+                                          <script language="javascript">document.writeln(_(" for "));</script>
+                                          Breadboard</option>
+			<option value="15">4D uCAM
+                                          <script language="javascript">document.writeln(_(" Module"));</script>
+                                          <script language="javascript">document.writeln(_(" for "));</script>
+                                          USB
+                                          <script language="javascript">document.writeln(_(" or "));</script>
+                                          RS232</option>
+			<option value="16">4D SOMO-14D
+                                          <script language="javascript">document.writeln(_(" Audio-Sound"));</script>
+                                          <script language="javascript">document.writeln(_(" Module"));</script>
+                                          </option>
+		</select></td>
+	</tr>
+	<tr>
+	<td style='text-align:right;' colspan="4">
+	     <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	     <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	     <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	     <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	</td>
+	</tr>
+  </table>
+</div>
+
+
+<div id="protobrd_dialog" class="contextMenu smalltext" ignoreclick="true">
+  <table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="3" class="dialogheading">
+                            <script language="javascript">document.writeln(_("Strip & Proto-Boards "));</script>
+                           <script language="javascript">document.writeln(_("Parts/Edits Selection"));</script>
+                          </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+                           <td colspan="4" class="smalltext" >&nbsp;
+                           <script language="javascript">document.writeln(_("Label: "));</script>
+                           &nbsp;&nbsp;&nbsp;<input type="text" size="10" id="PROTOBRDNAME"></td>
+	</tr>
+	<tr>
+		<td class="smalltext" >&nbsp;
+                            <script language="javascript">document.writeln(_("Device : "));</script> 
+                            &nbsp;<select id="protobrdpackage" class="smalltext">
+			<option value="1">
+                        		<script language="javascript">document.writeln(_("Inter-hole Track Cut"));</script>
+                        		</option>
+			<option value="2">
+					<script language="javascript">document.writeln(_("'X' style stripboard Track Cut"));</script>
+					</option>
+			<option value="3">
+                        		<script language="javascript">document.writeln(_("Small Spot-face Cut"));</script>
+                        		</option>
+			<option value="4">
+                        		<script language="javascript">document.writeln(_("Large Spot-face Cut"));</script>
+                        		</option>
+			<option value="5">
+                        		<script language="javascript">document.writeln(_("Resistor horizontal lead extension"));</script>
+                        		</option>
+			<option value="6">
+                        		<script language="javascript">document.writeln(_("Resistor vertical lead extension"));</script>
+                        		</option>
+			<option value="7">
+                        		<script language="javascript">document.writeln(_("Hole occupied/blocked indicator"));</script>
+                        		</option>
+			<option value="9">
+                        		<script language="javascript">document.writeln(_("Insulated Cross-Over Yellow & Green"));</script>
+                        		</option>
+			<option value="10">
+                        		<script language="javascript">document.writeln(_("Insulated Cross-Over Yellow & Blue"));</script>
+                        		</option>
+			<option value="11">
+                        		<script language="javascript">document.writeln(_("Insulated Cross-Over Orange & Purple"));</script>
+                        		</option>
+			<option value="12">
+                        		<script language="javascript">document.writeln(_("'Dummy' AA battery Positive terminal - Horiz"));</script>
+                        		</option>
+			<option value="13">
+                        		<script language="javascript">document.writeln(_("'Dummy' AA battery Positive terminal - Vert"));</script>
+                        		</option>
+			<option value="14">
+                        		<script language="javascript">document.writeln(_("2 row wide vertical strip mask"));</script>
+                        		</option>
+			<option value="15">
+                        		<script language="javascript">document.writeln(_("2 row deep horizontal strip mask"));</script>
+                        		</option>
+		</select></td>
+	</tr>
+	<tr>
+	    <td style='text-align:right;' colspan="4">
+	         <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	         <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	         <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	         <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	         <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	         <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	    </td>
+	</tr>
+  </table>
+</div>
+
+
+<div id="wlinks_dialog" class="contextMenu smalltext" ignoreclick="true">
+  <table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="3" class="dialogheading">
+                           <script language="javascript">document.writeln(_("1-Span Wire Properties"));</script>
+                          </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+        <tr>
+		<td colspan="4" class="smalltext" >&nbsp;
+                <script language="javascript">document.writeln(_("Select Format : "));</script>
+                &nbsp;<select id="wlinkspackage" class="smalltext">
+			<option value="1">
+                        <script language="javascript">document.writeln(_("Bare Tinned"));</script>
+                        </option>
+			<option value="2">
+                        <script language="javascript">document.writeln(_("Insulated except ends"));</script>
+                        </option>
+			<option value="3">
+                        <script language="javascript">document.writeln(_("Insul except @ prim hole"));</script>
+                        </option>
+			<option value="4">
+                        <script language="javascript">document.writeln(_("Bare Tinned over Spotface"));</script>
+                        </option>
+			<option value="5">
+                        <script language="javascript">document.writeln(_("Insulated over Spotface"));</script>
+                        </option>
+		</select></td>
+	</tr>
+        <tr>
+		<td colspan="4" class="smalltext" >&nbsp;
+                <script language="javascript">document.writeln(_("Wire Orientation : "));</script>
+                &nbsp;<select id="wlinksorient" class="smalltext">
+			<option value="11">
+                        <script language="javascript">document.writeln(_("Orientated to N"));</script>
+                        </option>
+			<option value="12">
+                        <script language="javascript">document.writeln(_("NE and bent up"));</script>
+                        </option>
+			<option value="13">
+                        <script language="javascript">document.writeln(_("Orientated to NE"));</script>
+                        </option>
+			<option value="14">
+                        <script language="javascript">document.writeln(_("NE and bent right"));</script>
+                        </option>
+			<option value="15">
+                        <script language="javascript">document.writeln(_("Orientated to E"));</script>
+                        </option>
+			<option value="16">
+                        <script language="javascript">document.writeln(_("SE and bent right"));</script>
+                        </option>
+			<option value="17">
+                        <script language="javascript">document.writeln(_("Orientated to SE"));</script>
+                        </option>
+			<option value="18">
+                        <script language="javascript">document.writeln(_("SE and bent down"));</script>
+                        </option>
+			<option value="19">
+                        <script language="javascript">document.writeln(_("Orientated to S"));</script>
+                        </option>
+			<option value="20">
+                        <script language="javascript">document.writeln(_("SW and bent down"));</script>
+                        </option>
+			<option value="21">
+                        <script language="javascript">document.writeln(_("Orientated to SW"));</script>
+                        </option>
+			<option value="22">
+                        <script language="javascript">document.writeln(_("SW and bent left"));</script>
+                        </option>
+			<option value="23">
+                        <script language="javascript">document.writeln(_("Orientated to W"));</script>
+                        </option>
+			<option value="24">
+                        <script language="javascript">document.writeln(_("NW and bent left"));</script>
+                        </option>
+			<option value="25">
+                        <script language="javascript">document.writeln(_("Orientated to NW"));</script>
+                        </option>
+			<option value="26">
+                        <script language="javascript">document.writeln(_("NW and bent up"));</script>
+                        </option>
+			<option value="27">
+                        <script language="javascript">document.writeln(_("N-S & Offset left"));</script>
+                        </option>
+			<option value="28">
+                        <script language="javascript">document.writeln(_("N-S & Offset right"));</script>
+                        </option>
+			<option value="29">
+                        <script language="javascript">document.writeln(_("E-W & Offset over"));</script>
+                        </option>
+			<option value="30">
+                        <script language="javascript">document.writeln(_("E-W & Offset under"));</script>
+                        </option>
+			<option value="31">
+                        <script language="javascript">document.writeln(_("90deg N to W Offset"));</script>
+                        </option>
+			<option value="32">
+                        <script language="javascript">document.writeln(_("90deg N to E Offset"));</script>
+                        </option>
+			<option value="33">
+                        <script language="javascript">document.writeln(_("90deg S to W Offset"));</script>
+                        </option>
+			<option value="34">
+                        <script language="javascript">document.writeln(_("90deg S to E Offset"));</script>
+                        </option>
+		</select></td>
+	 </tr>
+         
+	<tr>
+	      <td style='text-align:right;' colspan="4">
+	          <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	          <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	          <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	          <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	          <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	          <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	      </td>
+	</tr>
+  </table>
+</div>
+
+
+
+<div id="note_dialog" class="contextMenu smalltext" ignoreclick="true">
+<table cellpadding="2" cellspacing="0">
+	<tr>
+			    <td colspan="3" class="dialogheading">
+                            <script language="javascript">document.writeln(_("Note Properties"));</script>
+                            </td>
+			    <td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+                            <td colspan="4" class="smalltext" >&nbsp;
+                            <script language="javascript">document.writeln(_("Text : "));</script>
+                            &nbsp;<input type="text" size="10" id="NOTETEXT"></td>
+	</tr>
+	<tr>
+                            <td colspan="4" class="smalltext" >&nbsp;
+                            <script language="javascript">document.writeln(_("Hint: for multiple spaces use"));</script>
+			    <img src='images/nbsp.gif'></td>
+	</tr>
+              <tr>
+		<td>
+		<table cellpadding="3" cellspacing="0">
+			<tr>
+				<td align="right"><img src='images/note_1_icon.gif'></td>
+				<td align="left"><input type="radio" value="1" name="noteorient"
+					checked="true"></td>
+				<td align="right"><img src='images/note_2_icon.gif'></td>
+				<td align="left"><input type="radio" value="2" name="noteorient"></td>
+			</tr>
+			<tr>
+                         <td colspan="4" class="smalltext" >&nbsp;
+                            <script language="javascript">document.writeln(_("Note Size: "));</script>
+                            &nbsp;<select id="NOTESIZE" class="smalltext">
+                        	<option value="3">
+                            	<script language="javascript">document.writeln(_("Micro Tag"));</script>
+                            	</option>
+                        	<option value="1">
+                            	<script language="javascript">document.writeln(_("Small Note"));</script>
+                            	</option>
+                        	<option value="4">
+                            	<script language="javascript">document.writeln(_("Medium Note"));</script>
+                            	</option>
+                        	<option value="2">
+                            	<script language="javascript">document.writeln(_("Large Note"));</script>
+                            	</option>
+                        </select></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+	<td style='text-align:right;' colspan="4">
+	     <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	     <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	     <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	     <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	</td>
+	</tr>
+</table>
+</div>
+
+
+
+<div id="slider_dialog" class="contextMenu smalltext" ignoreclick="true">
+  <table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="3" class="dialogheading">
+		<script language="javascript">document.writeln(_("Floating Component Properties"));</script>
+		</td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+	<tr>
+		<td colspan="4" class="smalltext" >&nbsp;
+		<script language="javascript">document.writeln(_("Label : "));</script>
+		&nbsp;<input type="text" size="10" id="sliderTEXT"></td>
+	</tr>
+	<tr>
+		<td colspan="4" class="smalltext" >&nbsp;
+		<script language="javascript">document.writeln(_("Hint: for multiple spaces use"));</script>
+		<img src='images/nbsp.gif'></td>
+	</tr>
+
+	<tr>
+		<td class="smalltext" >&nbsp;
+                            <script language="javascript">document.writeln(_("Device : "));</script> 
+                            &nbsp;<select id="sliderpackage" class="smalltext">
+			<option value="1">
+                        		<script language="javascript">document.writeln(_("'Dummy' AA battery Positive terminal - Horiz"));</script>
+                        		</option>
+			<option value="2">
+                        		<script language="javascript">document.writeln(_("'Dummy' AA battery Positive terminal - Vert"));</script>
+                        		</option>
+			<option value="3">
+                        		<script language="javascript">document.writeln(_("LiPo Single AA Cell - Horiz"));</script>
+                        		</option>
+			<option value="4">
+                        		<script language="javascript">document.writeln(_("LiPo Single AA Cell - Vert"));</script>
+                        		</option>
+			<option value="5">
+                        		<script language="javascript">document.writeln(_("Program Socket Vertical for StripBoard"));</script>
+                        		</option>
+		</td>
+	      </tr>
+              <tr>
+		<td>
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="1" class="smalltext" >&nbsp;
+					<script language="javascript">document.writeln(_("Orientation: "));</script></td>
+				<td align="right"><img src='images/Float_icon1.gif'></td>
+				<td align="left"><input type="radio" value="1" name="sliderorient"
+					checked="true"></td>
+				<td colspan="1" class="smalltext" >&nbsp;&nbsp;&nbsp;</td>
+				<td align="right"><img src='images/Float_icon2.gif'></td>
+				<td align="left"><input type="radio" value="2" name="sliderorient"></td>
+			</tr>
+		</table>
+		</td>
+	      </tr>
+
+	<tr>
+	    <td style='text-align:right;' colspan="4">
+	         <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	         <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	         <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	         <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	         <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	         <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	    </td>
+	</tr>
+  </table>
+</div>
+
+
+// =========================================
+
+
+
+
+<div id="resistor_dialog" class="contextMenu smalltext"
+	ignoreclick="true">
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="4" class="dialogheading">
+                            <script language="javascript">document.writeln(_("Resistor Properties"));</script>
+                            </td>
+		<td align="right" class="dialogheading"><img src='images/closex.gif' onclick="hideAllDialogs();"></td>
+	</tr>
+              <tr>
+		<td  class="smalltext">&nbsp;
+                            <script language="javascript">document.writeln(_("Resistance: "));</script>
+                            &nbsp;</td>
+		<td colspan="4" ><select id="RESVALUE" class="smalltext">
+			<option value="0.0">0.0 ohm</option>
+			<option value="1.0">1.0 ohm</option>
+			<option value="1.2">1.2 ohm</option>
+			<option value="1.8">1.8 ohm</option>
+			<option value="2.2">2.2 ohm</option>
+			<option value="3.3">3.3 ohm</option>
+			<option value="3.9">3.9 ohm</option>
+			<option value="4.7">4.7 ohm</option>
+			<option value="5.6">5.6 ohm</option>
+			<option value="6.8">6.8 ohm</option>
+			<option value="8.2">8.2 ohm</option>
+
+			<option value="10">10 ohm</option>
+			<option value="11">11 ohm</option>
+			<option value="12">12 ohm</option>
+			<option value="13">13 ohm</option>
+			<option value="15">15 ohm</option>
+
+			<option value="16">16 ohm</option>
+			<option value="18">18 ohm</option>
+			<option value="20">20 ohm</option>
+			<option value="22">22 ohm</option>
+			<option value="24">24 ohm</option>
+			<option value="27">27 ohm</option>
+
+			<option value="30">30 ohm</option>
+			<option value="33">33 ohm</option>
+			<option value="36">36 ohm</option>
+			<option value="39">39 ohm</option>
+			<option value="43">43 ohm</option>
+			<option value="47">47 ohm</option>
+
+			<option value="51">51 ohm</option>
+			<option value="56">56 ohm</option>
+			<option value="62">62 ohm</option>
+			<option value="68">68 ohm</option>
+			<option value="75">75 ohm</option>
+			<option value="82">82 ohm</option>
+
+			<option value="91">91 ohm</option>
+			<option value="100">100 ohm</option>
+			<option value="110">110 ohm</option>
+			<option value="120">120 ohm</option>
+			<option value="130">130 ohm</option>
+			<option value="150">150 ohm</option>
+
+			<option value="160">160 ohm</option>
+			<option value="180">180 ohm</option>
+			<option value="200">200 ohm</option>
+			<option value="220">220 ohm</option>
+			<option value="240">240 ohm</option>
+			<option value="270">270 ohm</option>
+
+			<option value="300">300 ohm</option>
+			<option value="330">330 ohm</option>
+			<option value="360">360 ohm</option>
+			<option value="390">390 ohm</option>
+			<option value="430">430 ohm</option>
+			<option value="470">470 ohm</option>
+
+			<option value="510">510 ohm</option>
+			<option value="560">560 ohm</option>
+			<option value="620">620 ohm</option>
+			<option value="680">680 ohm</option>
+			<option value="750">750 ohm</option>
+			<option value="820">820 ohm</option>
+
+			<option value="910">910 ohm</option>
+			<option value="1000">1K</option>
+			<option value="1100">1.1K</option>
+			<option value="1200">1.2K</option>
+			<option value="1300">1.3K</option>
+			<option value="1500">1.5K</option>
+
+			<option value="1600">1.6K</option>
+			<option value="1800">1.8K</option>
+			<option value="2000">2K</option>
+			<option value="2200">2.2K</option>
+			<option value="2400">2.4K</option>
+			<option value="2700">2.7K</option>
+
+			<option value="3000">3.0K</option>
+			<option value="3300">3.3K</option>
+			<option value="3600">3.6K</option>
+			<option value="3900">3.9K</option>
+			<option value="4300">4.3K</option>
+			<option value="4700">4.7K</option>
+
+			<option value="5100">5.1K</option>
+			<option value="5600">5.6K</option>
+			<option value="6200">6.2K</option>
+			<option value="6800">6.8K</option>
+			<option value="7500">7.5K</option>
+			<option value="8200">8.2K</option>
+
+			<option value="9100">9.1K</option>
+			<option value="10000">10K</option>
+			<option value="11000">11K</option>
+			<option value="12000">12K</option>
+			<option value="13000">13K</option>
+			<option value="15000">15K</option>
+
+			<option value="16000">16K</option>
+			<option value="18000">18K</option>
+			<option value="20000">20K</option>
+			<option value="22000">22K</option>
+			<option value="24000">24K</option>
+			<option value="27000">27K</option>
+
+			<option value="30000">30K</option>
+			<option value="33000">33K</option>
+			<option value="36000">36K</option>
+			<option value="39000">39K</option>
+			<option value="43000">43K</option>
+			<option value="47000">47K</option>
+
+			<option value="51000">51K</option>
+			<option value="56000">56K</option>
+			<option value="62000">62K</option>
+			<option value="68000">68K</option>
+			<option value="75000">75K</option>
+			<option value="82000">82K</option>
+
+			<option value="91000">91K</option>
+			<option value="100000">100K</option>
+			<option value="110000">110K</option>
+			<option value="120000">120K</option>
+			<option value="130000">130K</option>
+			<option value="150000">150K</option>
+
+			<option value="160000">160K</option>
+			<option value="180000">180K</option>
+			<option value="200000">200K</option>
+			<option value="220000">220K</option>
+			<option value="240000">240K</option>
+			<option value="270000">270K</option>
+
+			<option value="300000">300K</option>
+			<option value="330000">330K</option>
+			<option value="360000">360K</option>
+			<option value="390000">390K</option>
+			<option value="430000">430K</option>
+			<option value="470000">470K</option>
+
+			<option value="510000">510K</option>
+			<option value="560000">560K</option>
+			<option value="620000">620K</option>
+			<option value="680000">680K</option>
+			<option value="750000">750K</option>
+			<option value="820000">820K</option>
+
+			<option value="910000">910K</option>
+			<option value="1000000">1M</option>
+			<option value="1100000">1.1M</option>
+			<option value="1200000">1.2M</option>
+			<option value="1300000">1.3M</option>
+			<option value="1500000">1.5M</option>
+
+			<option value="1600000">1.6M</option>
+			<option value="1800000">1.8M</option>
+			<option value="2000000">2M</option>
+			<option value="2200000">2.2M</option>
+			<option value="2400000">2.4M</option>
+			<option value="2700000">2.7M</option>
+
+			<option value="3000000">3M</option>
+			<option value="3300000">3.3M</option>
+			<option value="4700000">4.7M</option>
+			<option value="5100000">5.1M</option>
+			<option value="5600000">5.6M</option>
+			<option value="6200000">6.2M</option>
+
+			<option value="6800000">6.8M</option>
+			<option value="7500000">7.5M</option>
+			<option value="8200000">8.2M</option>
+			<option value="9100000">9.1M</option>
+			<option value="10000000">10M</option>
+		</select></td>
+	</tr>
+        	<tr>
+		<td  class="smalltext">&nbsp;
+                             <script language="javascript">document.writeln(_("Image : "));</script>
+                            &nbsp;</td>
+		<td colspan="3" ><select id="RESSIZE" class="smalltext">
+			<option value="0">
+                                          <script language="javascript">document.writeln(_("Vertical"));</script>
+                       		 </option>     // Span 1
+			<option value="1">
+                        		<script language="javascript">document.writeln(_("Small"));</script>
+			</option>     // Span 2
+			<option value="2">
+		              <script language="javascript">document.writeln(_("Medium"));</script>
+			</option>     // Span 3
+			<option value="3">
+                        		<script language="javascript">document.writeln(_("Large"));</script>
+			</option>     // Span 4
+			</select></td>
+	</tr>
+
+	<tr>
+
+			<td  class="smalltext">&nbsp;
+                                          <script language="javascript">document.writeln(_("Orientation:"));</script>
+ 			&nbsp&nbsp;</td>
+			<td align="right"><img src='images/horzicon.gif'></td>
+			<td align="left"><input type="radio" value="1" name="resistororient"
+			checked="true"></td>
+			<td align="right"><img src='images/verticon.gif'></td>
+			<td align="left"><input type="radio" value="2" name="resistororient"></td>
+
+	</tr>
+	<tr>
+	<td style='text-align:right;' colspan="4">
+	     <Button type="button" style="font-size:8pt;" onclick="applyDialogValues();" >
+	     <span><script language="javascript">document.writeln(_("Okay"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="copySelected();" />
+	     <span><script language="javascript">document.writeln(_("Copy"));</script></button>
+
+	     <Button type="button" style="font-size:8pt;" onclick="deleteSelected();" />
+	     <span><script language="javascript">document.writeln(_("Delete"));</script></button>
+	</td>
+	</tr>
+</table>
+</div>
+</form>
+
+<script type="text/javascript" src="javascript/menuctrl.js"">  
+</script> 
+
+
+</body>
+</html>
