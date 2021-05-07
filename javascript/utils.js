@@ -1134,7 +1134,7 @@ function generateColorChooser()
                 sb.append(wireColors[i]);
                 sb.append("' onclick=\"setColor('");
                 sb.append(wireColors[i]);
-                sb.append("',this);\" ignoreclick='true' src='images / transparent1x1.gif' height='10px' width='305px'></td></tr>");
+                sb.append("',this);\" ignoreclick='true' src='images/transparent1x1.gif' height='10px' width='305px'></td></tr>");
                 // width was 70 increase to 250
         }
         return sb.toString();
