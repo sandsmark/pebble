@@ -1210,6 +1210,7 @@ function loadCircuit(circuitCode, isFirstLoad)
         }
 
         clearBreadBoard( ! okToClear);
+        window.localStorage.setItem("lastCircuit", circuitCode);
     }
 
         var stateDisplay = document.getElementById('stateDisplay');
