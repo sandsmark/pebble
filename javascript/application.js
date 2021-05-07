@@ -1640,8 +1640,8 @@ function applyDialogValues()
                                 case "LED" :
                                 componentRef.imgname = "led_" + document.getElementById("LEDCOLOR").value + findRadioValue("ledorient");
                                 componentRef.color = document.getElementById("LEDCOLOR").value;
-                                applyComponentValuesToView(componentRef, globalComponent);
                                 componentRef.orientation = findRadioValue("ledorient");
+                                applyComponentValuesToView(componentRef, globalComponent);
                                 break;
 
                                 case "Diode" :
