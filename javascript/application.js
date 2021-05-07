@@ -1194,24 +1194,25 @@ function getDropOffset(compObject)
 }
 
 
-function loadCircuit()
+function loadCircuit(circuitCode, isFirstLoad)
 {
+    if (!isFirstLoad) {
         hideAllDialogs();
         var okToClear = false;
 
         if(globalBreadBoard.getComponentList().length > 0)
         {
-                if( ! confirm("Continuing will clear the current breadboard. Continue?"))
-                {
-                        return;
-                }
-                okToClear = true;
+            if( ! confirm("Continuing will clear the current breadboard. Continue?"))
+            {
+                return;
+            }
+            okToClear = true;
         }
 
         clearBreadBoard( ! okToClear);
+    }
 
         var stateDisplay = document.getElementById('stateDisplay');
-        var circuitCode = stateDisplay.value;
 
         var lines = circuitCode.split("\n");
         var bbtype = "BB1";
@@ -1789,6 +1790,7 @@ function applyDialogValues()
                 }
         }
         globalComponent = null;
+    window.localStorage.setItem("lastCircuit", globalBreadBoard.toString());
 }
 
 // -------------------------------------------------------------------------
@@ -1820,7 +1822,9 @@ function hideAllDialogs()
 {
         for(var i = 0; i < dialogNameArray.length; ++ i)
         {
+            try {
                 document.getElementById(dialogNameArray[i]).style.visibility = "hidden";
+            } catch (e) { }
         }
         globalDialogVisible = false;
 
@@ -1898,7 +1902,11 @@ function init()
         document.images["splashscreen"].style.visibility = "hidden";
 
 
-globalTopParkVisible = false;
+    globalTopParkVisible = false;
+
+    if (window.localStorage.getItem("lastCircuit")) {
+        loadCircuit(window.localStorage.getItem("lastCircuit"), true);
+    }
 }
 
 // = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -1907,5 +1915,3 @@ function iebody()
 {
         return (document.compatMode && document.compatMode != "BackCompat") ? document.documentElement : document.body;
 }
-
-

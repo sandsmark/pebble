@@ -166,6 +166,8 @@ var Drag =
                         componentRef.y = parseInt(Drag.obj.style["top"]);
                 }
                 Drag.obj = null;
+
+            window.localStorage.setItem("lastCircuit", globalBreadBoard.toString())
         }
         ,
 

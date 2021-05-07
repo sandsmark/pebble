@@ -38,6 +38,7 @@ BreadBoard.prototype.add = function (bbcomponent)
 {
         this.buffer.push(bbcomponent);
 
+    window.localStorage.setItem("lastCircuit", globalBreadBoard.toString())
 }
 ;
 
@@ -49,6 +50,7 @@ function (findID)
                 if(this.buffer[i].id == findID)
                 {
                         this.buffer.splice(i, 1);
+                    window.localStorage.setItem("lastCircuit", globalBreadBoard.toString())
                         break;
                 }
         }
@@ -124,6 +126,7 @@ function settopsideparking(selObj)
 {
         globalTopParkVisible = selObj.value;
         setBreadboardType(globalBreadBoardDisplay);
+    window.localStorage.setItem("lastCircuit", globalBreadBoard.toString())
 }
 
 //=============================================
@@ -594,6 +597,8 @@ function setBreadboardType(val)
 
 	generatePointArrays();
 	o.style.backgroundImage = "url(" + imgObj.src + ")";
+
+    window.localStorage.setItem("lastCircuit", globalBreadBoard.toString())
 }
 
 //=============================================
